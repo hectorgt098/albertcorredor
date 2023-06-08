@@ -423,9 +423,22 @@ body {
   justify-content: flex-end;
 }
 
-#imgcorredor{
+.corrart{
   width: 49.3vw;
   height: 500px;
+  border-bottom: 20px solid var(--main-bg-color);
+  border-left: 2px solid var(--main-bg-color);
+  border-radius: 0 0 0 4400px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background: var(--main-bg-color);
+}
+
+#imgcorredor{
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-bottom: 20px solid var(--main-bg-color);
   border-left: 2px solid var(--main-bg-color);
   border-radius: 0 0 0 4400px;
