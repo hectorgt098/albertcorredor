@@ -342,3 +342,83 @@ body {
 
 
 /* seccion de la galeria */
+
+.galeria{
+  min-height: 70vh;
+  display: flex;
+  width: 100%;
+  align-items:center;
+  justify-content: flex-start;
+}
+
+.corte{
+  display: flex;
+  width: 50vw;
+  overflow: hidden;
+}
+
+#carrusel{
+  display: flex;
+  height: 400px;
+  gap: 10px;
+  margin: 0;
+  align-items: center;
+  animation: carrusel 30s linear infinite;
+}
+
+#carrusel span{
+  content: '';
+  width: 300px;
+  height: 250px;
+  border-radius: 7px;
+  background-position: center;
+  background-size: 200%;
+}
+
+@keyframes carrusel {
+  0%{
+    transform: translateX(-50%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.txtGaleria{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.txtGaleria article{
+  width: 80%;
+}
+
+.txtGaleria strong{
+  color: var(--main-bg-color-1);
+}
+
+.txtGaleria h2{
+  color: var(--main-bg-color);
+  font-size: 3rem;
+  margin: 0;
+}
+.txtGaleria p{
+  font-size: 1.1rem;
+}
+
+.txtGaleria button{
+  width: 200px;
+  padding: 10px;
+  border: none;
+  background: var(--main-bg-color);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2px;
+}
