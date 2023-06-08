@@ -27,10 +27,24 @@ for (let i = 0; i < 20; i++) {
 /* script para abrir formulario */
 
 let botonform = document.getElementById("btnabrir");
+let vol = document.querySelector(".btnvol")
 botonform.onclick = abrirform;
 
 function abrirform(){
     let form = document.getElementById("voluntform")
     form.style.display = "flex";
     botonform.style.display = "none"
+    vol.style.paddingBottom = "3%"
 }
+
+window.addEventListener("scroll", function () {
+    var nav = document.querySelector(".menu");
+    var navOffset = nav.offsetTop + nav.offsetHeight;
+    var scrollPosition = window.scrollY + window.innerHeight;
+
+    if (scrollPosition >= navOffset) {
+      nav.classList.add("fixed");
+    } else {
+      nav.classList.remove("fixed");
+    }
+  });
