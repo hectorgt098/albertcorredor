@@ -48,3 +48,15 @@ window.addEventListener("scroll", function () {
       nav.classList.remove("fixed");
     }
   });
+
+/* cambio de imagenes para donde esta albert corredor */
+
+let donde = document.getElementById("imgcorredor")
+let index = 0;
+setInterval(() => {
+    donde.style.animation = "none"; // Elimina la animación actual
+    donde.style.backgroundImage = `url(${imagenes[index]})`;
+    index = (index + 1) % imagenes.length;
+    donde.offsetHeight; // Forzar el reflow para reiniciar la animación
+    donde.style.animation = "entradaform .8s ease";
+  }, 2000);
