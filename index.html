@@ -65,7 +65,15 @@
         </article>
       </div>
       <div class="btnvol">
-        <button>Formulario <img src="imagenes/bxs-calendar.svg" alt=""></button>
+        
+        <button id="btnabrir">Formulario <img src="imagenes/bxs-calendar.svg" alt=""></button>
+        <form id="voluntform" name="contacto" method="POST" data-netlify="true" netlify>
+          <h2>Unete al team corredor</h2>
+          <input type="text" name="nombre" placeholder="Nombre">
+          <input type="text" name="apellido" placeholder="Apellido">
+          <textarea name="comentario"cols="20" rows="10" placeholder="Comentario"></textarea>
+          <input id="btnenvio" type="submit" value="Enviar">
+        </form>
       </div>
     </section>
 
@@ -99,16 +107,6 @@
         </article>
       </div>
     </section>
-
-        <!--   <h2>probando</h2>
-      <form name="contacto" method="POST" data-netlify="true" netlify>
-        <input type="text" name="nombre" placeholder="nombre">
-        <input type="text" name="apellido" placeholder="apellido">
-        <textarea name="comentario"cols="20" rows="10" placeholder="comentario"></textarea>
-        <input type="submit" value="Enviar">
-
-      </form> -->
-
     <div class="redes">
       <div id="interno">
         <a href="#" aria-label="red social de facebook"><img src="imagenes/facebook.webp" alt="" /></a>

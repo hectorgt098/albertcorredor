@@ -206,6 +206,74 @@ body {
 
 /* Seccion de voluntarios */
 
+@keyframes entradaform {
+  0%{
+    clip-path: circle(4.2% at 49% 100%);
+  }
+ 
+  100%{
+    clip-path: circle(112.6% at 48% 100%);
+  }
+}
+
+#voluntform{
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+  animation: entradaform 2s ease;
+  padding: 30px;
+  background: var(--main-bg-color);
+  border-radius: 150px 10px 10px 10px ;
+}
+
+#voluntform h2{
+  font-family: 'GalanBold';
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#voluntform input{
+  height: 50px;
+  padding: 0 20px;
+  background: transparent;
+  border: 2px solid #f6f6f6;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 17px;
+}
+
+#voluntform input::placeholder{
+  color: #fff;
+}
+#voluntform textarea{
+  font-size: 17px;
+  padding:20px;
+  background: transparent;
+  border: 2px solid #f6f6f6;
+  color: #fff;
+}
+#voluntform textarea::placeholder{
+  color: #fff;
+}
+
+#btnenvio{
+  width: 200px;
+  align-self: center;
+  background: var(--main-bg-color-1) !important;
+  color: #000 !important;
+  border: none !important;
+  font-size: 17px;
+  transition: all .3s;
+}
+
+#btnenvio:hover{
+  background: #fff !important;
+  color: var(--main-bg-color);
+}
+
+
 .volun{
   display: flex;
   flex-direction: row;
@@ -228,6 +296,7 @@ body {
 }
 
 .tarjeta article h2{
+  font-family: 'GalanBold',sans-serif;
   font-size: 3rem;
   color: var(--main-bg-color);
   margin: 3px;
@@ -240,8 +309,9 @@ body {
 
 .btnvol{
   display: flex;
-  align-items: flex-end;
-  justify-content:center;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-end;
   width: 50vw;
   padding-bottom: 10%;
 }
@@ -258,11 +328,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all .3s ease;
 }
 
 .btnvol button:hover{
-  background: #f6f6f6;
+  background: var(--main-bg-color-1);
   color: var(--main-bg-color);
+  border: none;
 }
 
 .events{

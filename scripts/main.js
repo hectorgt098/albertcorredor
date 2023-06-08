@@ -21,3 +21,16 @@ for (let i = 0; i < 20; i++) {
   spanElement.style.backgroundImage = `url(${randomImage})`;
   carrusel.appendChild(spanElement);
 }
+
+
+
+/* script para abrir formulario */
+
+let botonform = document.getElementById("btnabrir");
+botonform.onclick = abrirform;
+
+function abrirform(){
+    let form = document.getElementById("voluntform")
+    form.style.display = "flex";
+    botonform.style.display = "none"
+}
