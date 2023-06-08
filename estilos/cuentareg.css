@@ -9,6 +9,7 @@
     backdrop-filter: blur(10px);
     z-index: 9999;
     animation: entrada .8s ease-in;
+    flex-direction: column;
 }
 
 @keyframes entrada {
@@ -25,14 +26,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #4a2174;
+    background: var(--main-bg-color);
     padding: 20px;
     color: #f5f5f5;
     border-radius: 10px;
     gap: 40px;
     box-shadow: 0 0 10px 4px #00000a50;
     width: 70vw;
-    height: 500px;
+    height: 400px;
   }
 
 
@@ -178,4 +179,16 @@
 #cierre:hover{
     background: var(--main-bg-color);
     color: var(--main-bg-color-1);
+}
+
+.manto button{
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    background: var(--main-bg-color-1);
+    color: var(--main-bg-color);
+    margin: -20px;
+    border-radius: 9px;
+    border: 6px solid var(--main-bg-color);
 }
