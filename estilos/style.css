@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Galano";
+  src: url("../GALANO/Galano\ Grotesque.otf");
+}
+@font-face {
+  font-family: "GalanBold";
+  src: url("../GALANO/Galano\ Grotesque\ Bold.otf");
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: "Galano", sans-serif;
+  flex-direction: column;
+}
+
+:root {
+  --main-bg-color: #542583;
+  --main-bg-color-1: rgb(255, 225, 0);
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background: var(--main-bg-color);
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logoMed {
+  width: 150px;
+  margin-left: 20px;
+}
+.enlaces {
+  display: flex;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.enlaces a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.redes {
+  overflow: hidden;
+  position: fixed;
+  top: 80%;
+  right: 0;
+  z-index: 999;
+  background-image: url("../imagenes/nsredes.webp");
+  height: 100px;
+  background-size: 100% 100%;
+  width: 130px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  transition: all 0.5s ease;
+}
+
+.redes img {
+  width: 30px;
+}
+
+#interno {
+  width: 120px;
+  gap: 5px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  background: #542583;
+  transform: translateX(100%);
+  rotate: 3deg;
+}
+
+.redes:hover #interno {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  min-height: 89.5vh;
+}
+.carr {
+  display: flex;
+  align-items: flex-end;
+  width: 50vw;
+}
+
+.carr img {
+  width: 50vw;
+}
+
+.txthero {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.txthero h1 {
+  display: flex;
+  flex-direction: column;
+  color: var(--main-bg-color);
+  font-size: 2rem;
+  position: relative;
+}
+
+.txthero span {
+  font-family: "GalanBold", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.txthero h1::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  border-bottom: 5px solid var(--main-bg-color-1);
+  position: absolute;
+}
+
+.sAlbert {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sAlbert img {
+  width: 95%;
+}
+
+.txtsAlbert {
+  width: 50vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.txtsAlbert h2 {
+  font-size: 3rem;
+  color: var(--main-bg-color);
+  margin: 0;
+}
+
+.txtsAlbert p {
+  color: #00000a90;
+  font-size: 20px;
+}
+
+.txtsAlbert span {
+  color: var(--main-bg-color);
+  font-family: "GalanBold";
+}
+
+.txtsAlbert button {
+  align-self: center;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  width: 300px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--main-bg-color);
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+}
+
+.txtsAlbert strong{
+    color: var(--main-bg-color-1);
+    font-weight: 800;
+}
+
+
+.txtsAlbert button{
+    transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(353deg) rotateY(356deg) rotateZ(14deg) translateX(0px) translateY(0px) translateZ(22px) skewX(6deg) skewY(340deg);
+}
