@@ -60,3 +60,9 @@ setInterval(() => {
     donde.offsetHeight; // Forzar el reflow para reiniciar la animación
     donde.style.animation = "entradaform .8s ease";
   }, 2000);
+
+  function restartVideo() {
+    var video = document.getElementById("player");
+    video.currentTime = 0; // Reiniciar el video al inicio
+    video.play(); // Reproducir el video nuevamente
+  }
