@@ -195,7 +195,72 @@ body {
     font-weight: 800;
 }
 
-
 .txtsAlbert button{
+  transition: all .3s ease-in-out;
     transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(353deg) rotateY(356deg) rotateZ(14deg) translateX(0px) translateY(0px) translateZ(22px) skewX(6deg) skewY(340deg);
+}
+
+.txtsAlbert button:hover{
+  transform: scaleX(1.1) scaleY(1.1) scaleZ(1) rotateX(360deg) rotateY(350deg) rotateZ(14deg) translateX(0px) translateY(0px) translateZ(22px) skewX(3deg) skewY(342deg);
+}
+
+/* Seccion de voluntarios */
+
+.volun{
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:linear-gradient(-90deg,#000, #00000a80) ,url('../imagenes/Capa_1-2-6.webp');
+}
+.tarjeta{
+  display: flex;
+  width: 50vw;
+  align-items: flex-end;  
+}
+
+.tarjeta article{
+  background: var(--main-bg-color-1);
+  padding: 20% 10%;
+  border-radius: 0 400px 0 0;
+}
+
+.tarjeta article h2{
+  font-size: 3rem;
+  color: var(--main-bg-color);
+  margin: 3px;
+}
+
+.tarjeta article p{
+  font-size: 
+  22px;
+}
+
+.btnvol{
+  display: flex;
+  align-items: flex-end;
+  justify-content:center;
+  width: 50vw;
+  padding-bottom: 10%;
+}
+
+.btnvol button{
+  width: 200px;
+  height: 70px;
+  font-size: 22px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-family: 'GalanBold',sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnvol button:hover{
+  background: #f6f6f6;
+  color: var(--main-bg-color);
 }
