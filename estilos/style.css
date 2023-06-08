@@ -140,6 +140,11 @@ body {
   width: 100%;
   min-height: 100vh;
 }
+.imgalbert{
+  width: 40vw;
+  display: flex;
+  align-items: flex-end;
+}
 
 .sAlbert img {
   width: 95%;
