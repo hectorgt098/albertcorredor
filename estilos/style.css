@@ -222,7 +222,7 @@ body {
 }
 
 .tarjeta article{
-  background: var(--main-bg-color-1);
+  background: linear-gradient(90deg, var(--main-bg-color-1), rgb(199, 179, 0), var(--main-bg-color-1)) ;
   padding: 20% 10%;
   border-radius: 0 400px 0 0;
 }
@@ -263,4 +263,79 @@ body {
 .btnvol button:hover{
   background: #f6f6f6;
   color: var(--main-bg-color);
+}
+
+.events{
+  display: flex;
+  min-height: 70vh;
+  width: 100%;
+}
+
+.event{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  flex-direction: column;
+}
+
+.event article{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.event article h2{
+  font-size: 3rem;
+  color: var(--main-bg-color);
+  margin: 0;
+}
+.event article p{
+  font-size: 1.1rem;
+}
+
+.event article button{
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  padding: 10px;
+  border: none;
+  background: var(--main-bg-color);
+  color: #fff;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.eventimg{
+  display: flex;
+  width: 50vw;
+}
+
+.event article span{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.event article span img{
+  width: 18px;
+}
+
+.eventimg{
+  display: flex;
+  width: 50vw;
+  justify-content: flex-end;
+}
+
+#imgcorredor{
+  width: 49.3vw;
+  height: 500px;
+  border-bottom: 20px solid var(--main-bg-color);
+  border-left: 4px solid var(--main-bg-color);
+  border-radius: 0 0 0 4400px;
+  background-image: linear-gradient(#00000a60,#00000a80),url(../imagenes/Fotos/evento.webp);
+  background-position: center;
+  background-size: cover;
 }
