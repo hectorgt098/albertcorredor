@@ -199,3 +199,12 @@
     background: var(--main-bg-color);
     color: #f5f5f5;
 }
+
+@keyframes salida {
+    0%{
+        clip-path: circle(72.8% at 51% 54%);
+    }  
+    100%{
+        clip-path: circle(2.4% at 100% 0);
+    }
+}

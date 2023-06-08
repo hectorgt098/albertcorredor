@@ -1,4 +1,25 @@
-// Función para ocultar el preloader después de 3 segundos
+window.addEventListener('load', function() {
+  var preloader = document.getElementById('preloader');
+  preloader.style.display = 'none';
+
+  var observer = new MutationObserver(function(mutationsList) {
+    for (var mutation of mutationsList) {
+      if (mutation.attributeName === 'style' && preloader.style.display === 'none') {
+        // Cuando el estilo display sea 'none', ejecutar el código de setTimeout
+        setTimeout(function() {
+          let manto = document.querySelector('.manto');
+          manto.style.display = "flex";
+          // Resto del código...
+        }, 10);
+        // Dejar de observar cambios después de que se cumpla la condición
+        observer.disconnect();
+        break;
+      }
+    }
+  });
+});
+
+
 setTimeout(function() {
     let manto = document.querySelector('.manto');
     manto.style.display = "flex";
@@ -68,5 +89,5 @@ setTimeout(function() {
   
       digitElement.innerHTML = formatTime(newValue);
     }
-  }, 2000);
+  }, 100);
   
