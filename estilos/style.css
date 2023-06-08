@@ -344,7 +344,7 @@ body {
 /* seccion de la galeria */
 
 .galeria{
-  min-height: 70vh;
+  min-height: 50vh;
   display: flex;
   width: 100%;
   align-items:center;
