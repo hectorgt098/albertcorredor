@@ -1,44 +1,24 @@
 window.addEventListener('load', function() {
-  var preloader = document.getElementById('preloader');
+  let preloader = document.getElementById('preloader');
   preloader.style.display = 'none';
+  let manto = document.querySelector('.manto');
+  manto.style.display = "flex";
+  // Agregar evento de clic
+  manto.onclick = cerrar;
 
-  var observer = new MutationObserver(function(mutationsList) {
-    for (var mutation of mutationsList) {
-      if (mutation.attributeName === 'style' && preloader.style.display === 'none') {
-        // Cuando el estilo display sea 'none', ejecutar el código de setTimeout
-        setTimeout(function() {
-          let manto = document.querySelector('.manto');
-          manto.style.display = "flex";
-          // Resto del código...
-        }, 10);
-        // Dejar de observar cambios después de que se cumpla la condición
-        observer.disconnect();
-        break;
-      }
+  // Agregar evento de tecla
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      cerrar();
     }
   });
+
+  function cerrar() {
+    manto.style.display = "none";
+  }
+
+console.log("funciono")
 });
-
-
-setTimeout(function() {
-    let manto = document.querySelector('.manto');
-    manto.style.display = "flex";
-    // Agregar evento de clic
-    manto.onclick = cerrar;
-  
-    // Agregar evento de tecla
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        cerrar();
-      }
-    });
-  
-    function cerrar() {
-      manto.style.display = "none";
-    }
-  
-    console.log(manto);
-  
   
     // Establecer la fecha objetivo (24 de diciembre de 2023)
     var targetDate = new Date("octubre 29, 2023").getTime();
@@ -89,5 +69,3 @@ setTimeout(function() {
   
       digitElement.innerHTML = formatTime(newValue);
     }
-  }, 100);
-  
