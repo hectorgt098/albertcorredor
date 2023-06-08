@@ -222,7 +222,7 @@ body {
 }
 
 .tarjeta article{
-  background: linear-gradient(90deg, var(--main-bg-color-1), rgb(199, 179, 0), var(--main-bg-color-1)) ;
+  background: linear-gradient(90deg, var(--main-bg-color-1), rgb(255, 200, 0), var(--main-bg-color-1)) ;
   padding: 20% 10%;
   border-radius: 0 400px 0 0;
 }
