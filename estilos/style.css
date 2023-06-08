@@ -333,7 +333,7 @@ body {
   width: 49.3vw;
   height: 500px;
   border-bottom: 20px solid var(--main-bg-color);
-  border-left: 4px solid var(--main-bg-color);
+  border-left: 2px solid var(--main-bg-color);
   border-radius: 0 0 0 4400px;
   background-image: linear-gradient(#00000a60,#00000a80),url(../imagenes/Fotos/evento.webp);
   background-position: center;
