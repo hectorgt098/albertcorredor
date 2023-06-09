@@ -21,6 +21,51 @@ body{
     margin: 0;
 }
 
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: var(--main-bg-color);
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  
+  /* Estilos adicionales para el aspecto visual del menú fijo */
+  .menu.fixed {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra si lo deseas */
+  }
+  
+  #logoMed {
+    width: 100px;
+    margin-left: 20px;
+  }
+  .enlaces {
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+  }
+  
+  .enlaces a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .enlaces a img{
+    width: 24px;
+  }
+  
+
+  @media (max-width:776px) {
+    .enlaces{
+        display: none;
+    }
+  }
+
 .bloque{
     display: flex;
     flex-direction:column;
@@ -45,7 +90,6 @@ img{
     width: 100%;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
     justify-content: center;
     align-items: flex-end;
 }
@@ -192,4 +236,7 @@ img{
 .contenido{
     display: flex;
     width: calc(100vw - 250px);
+    position: fixed;
 }
+
+

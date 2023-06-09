@@ -62,7 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: clamp(22px, 7vw, 36px);
     opacity: 0;
     animation: slideIn 0.5s forwards;
     background: #f3bc26;
@@ -103,7 +103,6 @@
         width: 90vw;
     }
     .digit{
-      font-size: 3rem;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -112,15 +111,10 @@
 }
 
 @media (max-width:600px){
-  .digit{
-    font-size: 2.4rem;
-  }
+
 }
 
 @media (max-width:500px){
-  .digit{
-    font-size: 2rem;
-  }
   .countdown{
     flex-wrap: wrap;
     gap: 10px;
@@ -138,10 +132,6 @@
     .contador{
         width: 80vw;
     }
-  .digit{
-    font-size: 
-    1.4rem;
-  }
   .countdown{
     flex-wrap: wrap;
     flex-direction: row;
