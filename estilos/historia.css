@@ -47,7 +47,7 @@ img{
     position: relative;
     overflow: hidden;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .histori article{
@@ -161,7 +161,14 @@ img{
 
 .cuento{
     display: none;
+    width: 70vw;
+    margin-right: 50px;
+    flex-direction: column;
     animation: entradacuentoarr 2s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+
+.cuento p{
+    font-size: clamp(15px, 5vw, 25px);
 }
 
 @keyframes entradacuento {
