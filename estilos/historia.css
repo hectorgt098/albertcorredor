@@ -47,14 +47,14 @@ img{
     position: relative;
     overflow: hidden;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .histori article{
     min-height: 40px;
     display: flex;
     height: 300px;
-    max-height: 100px;
+    max-height: 80px;
     width: 300px;
     background: var(--main-bg-color);
     border-radius: 100px;
@@ -79,8 +79,7 @@ img{
 }
 
 .histori article:hover{
-    scale: 110%;
-    width: 400px;
+    width: 350px !important;
     border-radius: 100px;
 }
 
@@ -93,7 +92,7 @@ img{
     top: 0.3%;
     margin: auto;
     width: 100%;
-    left: -180px;
+    left: -220px;
 }
 
 #f1{
@@ -188,4 +187,9 @@ img{
     100%{
         transform: translateY(0);
     }
+}
+
+.contenido{
+    display: flex;
+    width: calc(100vw - 250px);
 }
