@@ -1,0 +1,61 @@
+:root{
+    --main-bg-color: #542583;
+    --main-bg-color-1: rgb(255, 225, 0);
+}
+
+.galeria{
+    margin-top: 50px;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+    width: 90vw;
+    margin: 50px auto;
+}
+
+.galeria img{
+    width: 100%;
+    border-radius: 6px;
+}
+
+.selectores{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 905px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2px;
+    margin: 30px auto;
+    overflow-x: hidden;
+    min-height: 500px;
+    align-items: center;
+}
+
+.selectores button{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(150deg,var(--main-bg-color), #00000a80) ,url('../imagenes/Capa_1-2-6.webp');
+    background-size: cover;
+    background-position: center;
+    border: none;
+    color: #fff;
+    font-size: clamp(18px,5vh,22px);
+    border-radius: 6px;
+    box-shadow: 0 0 10px #ffffff50;
+}
+
+#sel2{
+    scale: 150%;
+}
+
+.select{
+    display: flex;
+    transition: all .5s ease;
+}
+
+.select button{
+    transition: all .5s ease;
+}
