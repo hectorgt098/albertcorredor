@@ -287,8 +287,8 @@ body {
 }
 
 #voluntform input{
-  height: 50px;
-  padding: 0 20px;
+  height: 40px;
+  padding: 0 10px;
   background: transparent;
   border: 2px solid #f6f6f6;
   border-radius: 4px;
@@ -299,17 +299,7 @@ body {
 #voluntform input::placeholder{
   color: #fff;
 }
-#voluntform textarea{
-  font-size: 17px;
-  padding:20px;
-  background: transparent;
-  border: 2px solid #f6f6f6;
-  border-radius: 4px;
-  color: #fff;
-}
-#voluntform textarea::placeholder{
-  color: #fff;
-}
+
 
 #btnenvio{
   width: 200px;
