@@ -1,22 +1,30 @@
 let selectores = document.querySelector('.selectores');
 let selects = document.querySelector('.select');
 let sel = document.querySelectorAll('button');
+let desplazamiento = 0;
 
 selectores.addEventListener('click', desplazar);
 
 function limpiar() {
   sel.forEach((element, i) => {
-    element.style.scale = "100%";
+    element.style.transform = "scale(1)";
   });
 }
 
-function desplazar() {
+function desplazar(event) {
   limpiar();
-  selects.style.transform = "translateX(-300px)";
+  
+  if (event.clientX > window.innerWidth / 2) {
+    desplazamiento -= 300;
+  } else {
+    desplazamiento += 300;
+  }
+  
+  selects.style.transform = `translateX(${desplazamiento}px)`;
+  
   sel.forEach((element, i) => {
     element.addEventListener('click', ampliar);
   });
-
 }
 
 function ampliar(event) {
