@@ -25,7 +25,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2px;
-    margin: 30px auto;
     overflow-x: hidden;
     min-height: 500px;
     align-items: center;
@@ -43,7 +42,6 @@
     border: none;
     color: #fff;
     font-size: clamp(18px,5vh,22px);
-    border-radius: 6px;
     box-shadow: 0 0 10px #ffffff50;
 }
 
@@ -59,3 +57,23 @@
 .select button{
     transition: all .5s ease;
 }
+
+.carrusel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.desp{
+    height: 300px;
+    width: 50px;
+    border: none;
+    background: var(--main-bg-color);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight:700;
+    box-shadow:  0 0 7px #00000a60;
+    cursor: pointer;
+}
+

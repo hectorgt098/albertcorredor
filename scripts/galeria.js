@@ -1,36 +1,35 @@
-let selectores = document.querySelector('.selectores');
-let selects = document.querySelector('.select');
-let sel = document.querySelectorAll('button');
+let selectores = document.querySelector('.selectores')
+let selects = document.querySelector('.select')
+let sel = document.querySelectorAll('button')
 let desplazamiento = 0;
-
-selectores.addEventListener('click', desplazar);
+let izquierda = document.getElementById('left')
+let derecha = document.getElementById('right')
+derecha.onclick = dere
+izquierda.onclick = izq
 
 function limpiar() {
   sel.forEach((element, i) => {
-    element.style.transform = "scale(1)";
+    element.style.transform = "scale(1)"
   });
 }
 
 function desplazar(event) {
   limpiar();
   
-  if (event.clientX > window.innerWidth / 2) {
+  function dere(){
     desplazamiento -= 300;
-  } else {
+  }
+function izq(){
     desplazamiento += 300;
   }
   
-  selects.style.transform = `translateX(${desplazamiento}px)`;
+  selects.style.transform = `translateX(${desplazamiento}px)`
   
   sel.forEach((element, i) => {
-    element.addEventListener('click', ampliar);
+    element.addEventListener('click', ampliar)
   });
 }
 
-function ampliar(event) {
-  const button = event.target;
-  button.style.transform = "scale(1.5)";
-}
 
 console.log(selects);
 console.log(selectores);

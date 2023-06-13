@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Galano";
+    src: url("../GALANO/Galano\ Grotesque.otf");
+  }
+  @font-face {
+    font-family: "GalanBold";
+    src: url("../GALANO/Galano\ Grotesque\ Bold.otf");
+  }
+
+
+
+:root{
+    --main-bg-color: #542583;
+    --main-bg-color-1: rgb(255, 225, 0);
+}
+
+
+body{
+    display: flex;
+    font-family: 'Galano',sans-serif;
+}
