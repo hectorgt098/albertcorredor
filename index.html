@@ -15,6 +15,8 @@
     <title>Albert Corredor</title>
   </head>
   <body>
+    <div style="position: fixed; height: 100vh; width: 100vw; display: flex; align-items: center;
+    justify-content: center; background: #fff; z-index: 99999999; font-size: 3rem; color: var(--main-bg-color);">Trabajo en progreso</div>
     <div id="preloader">
         <div class="loader">
           <img src="imagenes/preload.webp" alt="">
@@ -55,21 +57,26 @@
           <span>“MEDELLÍN NOS UNE”</span>
         </p>
 
-        <a href="historia2.html"><button>Conoce <strong>más</strong></button></a>
+        <a href="historia.html"><button>Conoce <strong>más</strong></button></a>
       </div>
     </section>
     <section class="volun">
       <div class="tarjeta">
         <article>
-          <h2>!Unete al team corredor!</h2>
-          <p>Queremos que hagas parte de nuestro equipo. <br>
-            presiona el boton para mas información
-          </p>
+          <h2>!Se un voluntario!</h2>
+          <p>Llena el formulario con tus datos y pronto nos comunicaremos contigo.</p>
         </article>
       </div>
       <div class="btnvol">
-    
-        <a href="voluntarios.html"> <button id="btnabrir">Accede aquí</button></a>
+        
+        <button id="btnabrir">Formulario <img src="imagenes/bxs-calendar.svg" alt=""></button>
+        <form id="voluntform" name="contacto" method="POST" data-netlify="true" netlify>
+          <h2>Unete al team corredor</h2>
+          <input type="number" name="cedula" placeholder="cedula">
+          <input type="text" name="nombre" placeholder="Nombre">
+          <input type="text" name="apellido" placeholder="Apellido">
+          <input id="btnenvio" type="submit" value="Enviar">
+        </form>
       </div>
     </section>
 
@@ -118,7 +125,7 @@
     <div class="manto">
     <section class="contador">
         <strong id="cierre">X</strong>
-        <h1 class="title">FALTAN:</h1>
+        <h1 class="title">Faltan:</h1>
         <div class="countdown">
           <div class="target">
             <label for="">Días</label>
