@@ -268,14 +268,19 @@ body {
 }
 
 #voluntform{
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 70%;
+  width: 40%;
   animation: entradaform .8s ease;
-  padding: 30px;
+  padding: 60px 30px 30px 30px;
   background: var(--main-bg-color);
-  border-radius: 150px 10px 10px 10px ;
+  border-radius: 150px 150px 10px 10px ;
+}
+
+#voluntform p{
+  color: #f6f6f6;
+  font-size: 14px;
 }
 
 #voluntform h2{
@@ -284,20 +289,39 @@ body {
   font-size: 2rem;
   text-align: center;
   font-weight: 400;
+  margin: 0;
+}
+
+#voluntform input, select{
+  box-shadow: 0 0 6px #00000a60;
+}
+
+#voluntform select{
+  background: transparent;
+  color: #00000a80;
+  border: none;
+  background: #f6f6f6;
+  padding: 10px;
+}
+#voluntform select:focus{
+  outline: 1px solid var(--main-bg-color-1);
+}
+#voluntform select option{
+  color: #000;
 }
 
 #voluntform input{
   height: 40px;
   padding: 0 10px;
-  background: transparent;
-  border: 2px solid #f6f6f6;
+  background: #f6f6f6;
   border-radius: 4px;
-  color: #fff;
+  color: #000;
   font-size: 17px;
+  border: none;
 }
 
 #voluntform input::placeholder{
-  color: #fff;
+  color: #00000a70;
 }
 
 
@@ -316,7 +340,6 @@ body {
   color: var(--main-bg-color);
 }
 
-
 .volun{
   display: flex;
   flex-direction: row;
@@ -334,7 +357,7 @@ body {
 
 .tarjeta article{
   background: linear-gradient(90deg, var(--main-bg-color-1), rgb(255, 200, 0), var(--main-bg-color-1)) ;
-  padding: 20% 10%;
+  padding: 20% 16.6%;
   border-radius: 0 400px 0 0;
 }
 
@@ -614,6 +637,7 @@ body {
 
 .tarjeta article h2{
   font-size: clamp(25px,8vh,40px);
+  text-align: center;
 }
 .tarjeta article p{
   font-size: clamp(18px,3vh,28px);

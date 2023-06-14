@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/team.css" />
+    <title>TeamCorredor</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <img id="logoMed" src="imagenes/medellinnosune.webp" alt="" />
+      <div class="enlaces">
+        <a href="index.html"
+          >Inicio<img src="imagenes/bxs-home.svg" alt=""
+        /></a>
+        <a href="index.html"
+          >Campaña<img src="imagenes/bxs-category.svg" alt=""
+        /></a>
+        <a href="index.html"
+          >Ciudadanos<img src="imagenes/bxs-user-pin.svg" alt=""
+        /></a>
+        <a href="index.html"
+          >Calendario<img src="imagenes/bxs-calendar.svg" alt=""
+        /></a>
+      </div>
+    </nav>
+    <section class="team">
+      <span class="banner"></span>
+      <article class="teamcontent">
+        <img src="imagenes/team.webp" alt="" />
+        <p>
+          Somos una red de personas inteligentes, carismáticas, lideres,
+          lideresas y apasionadas por trabajar en los que nos une; hoy más que
+          nada, <strong> MEDELLÍN NOS UNE.</strong> Por tanto, nuestro principal
+          objetivo es ayudar a que la ciudadanía se sienta protagonista e
+          implicada en las transformaciones que la ciudad requiere.
+        </p>
+      </article>
+
+      <div class="razones">
+        <h3>Queremos que seas parte del "TEAM CORREDOR" para:</h3>
+        <div class="razon">
+          <article>
+            <img src="imagenes/ico1.webp" alt="" />
+            <p>
+              Crear y enriquecer nuestra red con nuevos liderazgos que apoyen la
+              transformación de Medellín
+            </p>
+          </article>
+          <article>
+            <img src="imagenes/ico2.webp" alt="" />
+            <p>
+              Mantener un diálogo activo para encontrar juntos las soluciones
+              que necesita la ciudad.
+            </p>
+          </article>
+          <article>
+            <img src="imagenes/ico3.webp" alt="" />
+            <p>
+              Actuar sobre los territorios HOY – Las soluciones no dependen de
+              la política tradicional; pensar + actuar.
+            </p>
+          </article>
+        </div>
+        <form id="voluntform" name="contacto" method="POST" data-netlify="true" netlify>
+            <h2>Unete al team corredor</h2>
+            <p>Recibirás un correo electrónico o una llamada telefónica con instrucciones detalladas después que te registres.</p>
+            <input type="number" name="cedula" placeholder="cedula">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <div style="display: flex; flex-direction: row; width: 100%; gap: 10px;">
+            <input style="width: 50%;" type="number" name="celular" placeholder="Celular">
+            <input style="width: 50%;" type="email" name="correo" placeholder="Correo">
+            </div>
+            <div style="display: flex; gap: 10px; flex-direction: row; width: 100%;">
+            <select style="width: 50%;" name="comuna" id="comuna">
+                <option value="predefinido">seleccione su comuna</option>
+                <option value="Manrrique">Manrique</option>
+            </select>
+            <select style="width: 50%;" name="barrio" id="barrio">
+                <option value="predefinida">Seleccione su barrio</option>
+                <option value="la salle">la salle</option>
+            </select>
+            </div>
+            <p style="margin: 10px 0; line-height: 1; font-size: 14px;">Por ultimo, cuentanos ¿En que nos quieres ayudar?</p>
+            <select name="tpvoluntario" id="tpvoluntario">
+                <option value="predefinid">Seleccione tipo voluntariado</option>
+                <option value="firma">firmas</option>
+            </select>
+            <input id="btnenvio" type="submit" value="Enviar">
+          </form>
+      </div>
+    </section>
+  </body>
+</html>
