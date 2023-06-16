@@ -65,3 +65,34 @@ document.addEventListener('fullscreenchange', function() {
     arrowRight.style.display = 'none';
   }
 });
+
+function insertarImagenes(ruta, imag) {
+  const gallerySection = document.querySelector('.gallery');
+
+  imag.forEach((imagen) => {
+    const imgElement = document.createElement('img');
+    imgElement.src = `${ruta}/${imagen}`;
+    gallerySection.appendChild(imgElement);
+  });
+}
+
+// Ejemplo de uso:
+var ruta = "../imagenes/Fotos";
+
+const imag = [
+  "evento.webp",
+  "img1.webp",
+  "img2.webp",
+  "img3.webp",
+  "img4.webp",
+  "img5.webp",
+  "img6.webp",
+  "img7.webp",
+  "img8.webp",
+  "img9.webp",
+  "img10.webp",
+  "img11.webp",
+  "img12.webp"
+];
+
+insertarImagenes(ruta, imag);
