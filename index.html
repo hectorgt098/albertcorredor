@@ -3,45 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="imagenes/albert2.webp" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="imagenes/albert2.webp"
+      type="image/x-icon"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Nos une las ganas de trabajar por nuestra ciudad, Albert Corredor"
     />
     <link rel="stylesheet" href="estilos/style.css" />
-    <link rel="stylesheet" href="estilos/cuentareg.css">
-    <link rel="stylesheet" href="estilos/preloader.css">
+    <link rel="stylesheet" href="estilos/cuentareg.css" />
+    <link rel="stylesheet" href="estilos/preloader.css" />
     <title>Albert Corredor</title>
   </head>
   <body>
     <div id="preloader">
-        <div class="loader">
-          <img src="imagenes/preload.webp" alt="">
-        </div>
-      </div>    
+      <div class="loader">
+        <img src="imagenes/preload.webp" alt="" />
+      </div>
+    </div>
     <nav class="menu">
       <img id="logoMed" src="imagenes/medellinnosune.webp" alt="" />
       <div class="enlaces">
-        <a href="index.html">Inicio <img src="imagenes/bxs-home.svg" alt="" /></a>
-        <a href="index.html">Campaña <img src="imagenes/bxs-category.svg" alt="" /></a>
-        <a href="index.html">Ciudadanos<img src="imagenes/bxs-user-pin.svg" alt="" /></a>
-        <a href="index.html">Calendario<img src="imagenes/bxs-calendar.svg" alt="" /></a>
+        <a href="index.html"
+          >Inicio
+          <img src="imagenes/bxs-home.svg" alt="" />
+        </a>
+        <a href="campaña.html"
+          >Campaña
+          <img src="imagenes/bxs-category.svg" alt="" />
+        </a>
+        <a href="index.html"
+          >Ciudadanos
+          <img src="imagenes/bxs-user-pin.svg" alt="" />
+        </a>
+        <a href="eventos.html"
+          >Calendario
+          <img src="imagenes/bxs-calendar.svg" alt="" />
+        </a>
       </div>
     </nav>
     <section class="hero">
       <span id="manto2"></span>
-      <video id="player" src="imagenes/corredor.mp4" autoplay="autoplay" muted="true" onended="restartVideo()" ></video>
+      <video
+        id="player"
+        src="imagenes/Fotos/videof.mp4"
+        autoplay="autoplay"
+        muted="true"
+        onended="restartVideo()"
+      ></video>
       <div class="txthero">
-        <h1>
-          <span>NOS UNE</span>las ganas de trabajar por
-          <span>nuestra ciudad</span>
-        </h1>
+        <h1 id="animtext"></h1>
       </div>
     </section>
     <section class="sAlbert">
       <div class="imgalbert">
-        <img src="imagenes/alb.webp" alt="" />
+        <img src="imagenes/salbert.webp" alt="" />
       </div>
       <div class="txtsAlbert">
         <h2>Soy Albert,</h2>
@@ -54,66 +73,128 @@
           este ambicioso proyecto de presente y de futuro para nuestra ciudad.
           <span>“MEDELLÍN NOS UNE”</span>
         </p>
-
-        <a href="historia.html"><button>Conoce <strong>más</strong></button></a>
+        <a href="historia2.html">
+          <button>
+            Conoce
+            <strong>más</strong>
+          </button>
+        </a>
       </div>
     </section>
     <section class="volun">
       <div class="tarjeta">
         <article>
-          <h2>!Se un voluntario!</h2>
-          <p>Llena el formulario con tus datos y pronto nos comunicaremos contigo.</p>
+          <h2>!Unete al team!</h2>
+          <p>Queremos que hagas parte de nosotros, animate a participar.</p>
         </article>
       </div>
       <div class="btnvol">
-        <a href="voluntarios.html"><button>Accede aquí</button></a>
+        <a href="voluntarios.html">
+          <button>
+            <span style="z-index: 3">Accede aquí</span>
+          </button>
+        </a>
       </div>
     </section>
-
     <section class="events">
       <div class="event">
         <article>
-        <h2>¿Donde esta corredor?</h2>
-        <p>Visualiza las actividades que se realizaran y lugares donde estare</p>
-        <span><img src="imagenes/bxs-check-circle.svg" alt=""> Debates</span>
-        <span><img src="imagenes/bxs-check-circle.svg" alt=""> Recorridos</span>
-        <span><img src="imagenes/bxs-check-circle.svg" alt=""> Ruedas de prensa</span>
-        <button>Abrir agenda <img src="imagenes/bxs-calendar.svg" alt=""></button>
+          <h2>¿Donde esta corredor?</h2>
+          <p>
+            Visualiza las actividades que se realizaran y lugares donde estare
+          </p>
+          <span>
+            <img src="imagenes/bxs-check-circle.svg" alt="" /> Debates
+          </span>
+          <span>
+            <img src="imagenes/bxs-check-circle.svg" alt="" /> Recorridos
+          </span>
+          <span>
+            <img src="imagenes/bxs-check-circle.svg" alt="" />
+            Ruedas de prensa
+          </span>
+          <a href="eventos.html" style="text-decoration: none">
+            <button>
+              <span style="z-index: 2">
+                Abrir agenda
+                <img src="imagenes/bxs-calendar.svg" alt="" />
+              </span>
+            </button>
+          </a>
         </article>
       </div>
       <div class="eventimg">
         <article class="corrart">
-        <span id="imgcorredor"></span>
+          <span id="imgcorredor"></span>
         </article>
       </div>
     </section>
-
     <section class="galeria">
       <div class="corte">
-      <div id="carrusel">
-      </div>
+        <div id="carrusel"></div>
       </div>
       <div class="txtGaleria">
         <article>
           <strong>Albert Corredor</strong>
           <h2>¡Accede a la galeria!</h2>
-          <p>Observa nuestro contenido actualizado a diario</p> 
-          <a href="galeria.html" style="text-decoration: none;"><button>Ver mas <img src="imagenes/bxs-user-pin.svg" alt=""></button></a>
+          <p>Observa nuestro contenido actualizado a diario</p>
+          <a href="galeria.html" style="text-decoration: none">
+            <button>
+              <span style="z-index: 2;">
+              Ver mas
+            </span>
+              <img src="imagenes/bxs-user-pin.svg" alt="" />
+            </button>
+          </a>
         </article>
       </div>
     </section>
+    <footer class="foot">
+      <form
+        id="contact"
+        name="contacto"
+        method="POST"
+        data-netlify="true"
+        netlify
+      >
+        <div>
+          <label for="Nombre">Nombre:</label>
+          <input name="Nombre" type="text" />
+        </div>
+        <div class="Contact">
+          <label for="Celular">Celular:</label>
+          <input name="Celular" type="number" />
+          <label for="Correo">Correo:</label>
+          <input name="Correo" type="email" />
+        </div>
+        <div>
+          <label for="mensaje">Mensaje:</label>
+          <textarea name="mensaje" id="msg" cols="30" rows="5"></textarea>
+        </div>
+        <input type="submit" id="btn-enviar" />
+      </form>
+    </footer>
     <div class="redes">
       <div id="interno">
-        <a href="#" aria-label="red social de facebook"><img src="imagenes/facebook.webp" alt="" /></a>
-        <a href="#" aria-label="red social de tiktok"><img src="imagenes/tiktok.webp" alt="" /></a>
-        <a href="#" aria-label="red social de instagram"><img src="imagenes/instagram.webp" alt="" /></a>
-        <a href="#" aria-label="red social de twitter"><img src="imagenes/twitter.webp" alt="" /></a>
-        <a href="#" aria-label="red social de youtube"><img src="imagenes/youtube.webp" alt="" /></a>
+        <a href="#" aria-label="red social de facebook">
+          <img src="imagenes/facebook.webp" alt="" />
+        </a>
+        <a href="#" aria-label="red social de tiktok">
+          <img src="imagenes/tiktok.webp" alt="" />
+        </a>
+        <a href="#" aria-label="red social de instagram">
+          <img src="imagenes/instagram.webp" alt="" />
+        </a>
+        <a href="#" aria-label="red social de twitter">
+          <img src="imagenes/twitter.webp" alt="" />
+        </a>
+        <a href="#" aria-label="red social de youtube">
+          <img src="imagenes/youtube.webp" alt="" />
+        </a>
       </div>
     </div>
-
     <div class="manto">
-    <section class="contador">
+      <section class="contador">
         <strong id="cierre">X</strong>
         <h1 class="title">Faltan:</h1>
         <div class="countdown">
@@ -145,11 +226,11 @@
             </article>
           </div>
         </div>
-        <img src="https://i.ibb.co/k4ML9s7/Recurso-1-2.png" alt="">
+        <img src="https://i.ibb.co/k4ML9s7/Recurso-1-2.png" alt="" />
       </section>
-      <button>Continuar mi viaje</button>
     </div>
-      <script src="scripts/cuentareg.js"></script>
-      <script src="scripts/main.js"></script>
+    <script src="scripts/cuentareg.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animaciones.js"></script>
   </body>
 </html>
