@@ -210,7 +210,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-end;
   position: relative;
   z-index: 2;
-  overflow: hidden;
+
 }
 
 .sAlbert img {
@@ -499,8 +499,7 @@ select {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(-90deg, #000, #00000a80),
-    url("../imagenes/Capa_1-2-6.webp");
+  background-image: url("../imagenes/Capa_1-2-6.webp");
     z-index: 2;
 }
 .tarjeta {
@@ -535,22 +534,15 @@ select {
   font-size: 22px;
 }
 
-.btnvol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  width: 50vw;
-  padding-bottom: 10%;
-}
 
-.btnvol button {
+
+.tarjeta button {
   width: 200px;
-  height: 70px;
+  padding: 5px;
   font-size: 22px;
-  color: #fff;
+  color: var(--main-bg-color);
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid var(--main-bg-color);
   border-radius: 5px;
   font-family: "GalanBold", sans-serif;
   display: flex;
@@ -561,13 +553,15 @@ select {
   z-index: 2;
   transition-delay: .3s;
   overflow: hidden;
+  cursor: pointer;
+  align-self: center;
 }
 
-.btnvol button::after{
+.tarjeta button::after{
   content: '';
   width: 50%;
   height: 100%;
-  background: var(--main-bg-color-1);
+  background: var(--main-bg-color);
   position: absolute;
   z-index: 0;
   left: 0;
@@ -575,13 +569,13 @@ select {
   transition: all .6s ease;
 }
 
-.btnvol button:hover::after{
+.tarjeta button:hover::after{
   transform: translateX(200%) skewX(-25deg);
 }
 
-.btnvol button:hover {
-  background: var(--main-bg-color-1);
-  color: var(--main-bg-color);
+.tarjeta button:hover {
+  background: var(--main-bg-color);
+  color: var(--main-bg-color-1);
 }
 
 .events {
@@ -837,7 +831,8 @@ select {
   .volun {
     flex-direction: column;
     align-items: flex-end;
-    min-height: 60vh;
+    min-height: 90vh;
+    background-position: 0 40vh;
   }
 
   .tarjeta {
@@ -982,7 +977,7 @@ textarea {
   content: "";
   text-transform: uppercase;
   line-height: 1.2;
-  animation: animtext 15s linear infinite;
+  animation: animtext 25s linear infinite;
 }
 
 @keyframes animtext {
@@ -992,77 +987,62 @@ textarea {
 
   18% {
     content: "NOS UNE las ganas de trabajar por nuestra ciudad";
-    transform: rotatex(0deg);
     opacity: 1;
   }
 
   20% {
     opacity: 0;
-    transform: rotatex(90deg);
   }
 
   22% {
     opacity: 1;
-    transform: rotatex(0);
     content: "Medellín necesita llegar a consensos para lograr grandes transformaciones";
   }
 
   40% {
     opacity: 1;
-    transform: rotatex(0);
     content: "Medellín necesita llegar a consensos para lograr grandes transformaciones";
   }
   42% {
     opacity: 0;
-    transform: rotatex(90deg);
   }
   44% {
     opacity: 1;
-    transform: rotatex(0);
     content: "Trabajamos juntos por una transformación incluyente y sostenible";
   }
 
   62% {
     content: "Trabajamos juntos por una transformación incluyente y sostenible";
     opacity: 1;
-    transform: rotatex(0);
   }
   64% {
     opacity: 0;
-    transform: rotatex(90deg);
   }
   66% {
     opacity: 1;
-    transform: rotatex(0);
     content: "NOS UNE las ganas de fortalecer el sistema de emprendimiento en Medellín";
   }
   84% {
     opacity: 1;
-    transform: rotatex(0);
     content: "NOS UNE las ganas de fortalecer el sistema de emprendimiento en Medellín";
   }
   86% {
     opacity: 0;
-    transform: rotatex(90deg);
   }
   88% {
     opacity: 1;
-    transform: rotatex(0);
     content: "NOS UNIMOS por el desarrollo ecónomico de nuestra ciudad";
   }
 
   98% {
     opacity: 1;
-    transform: rotatex(0);
     content: "NOS UNIMOS por el desarrollo ecónomico de nuestra ciudad";
   }
   99% {
     opacity: 0;
-    transform: rotatex(90deg);
   }
   100% {
     content: "NOS UNE las ganas de trabajar por nuestra ciudad";
-    transform: rotatex(0deg);
     opacity: 1;
   }
 }
