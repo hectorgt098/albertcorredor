@@ -1,98 +1,101 @@
-var imagenes = document.querySelectorAll('.gallery img');
-var currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+  let rec = document.getElementById('rec');
+  let gal = document.querySelector('.gallery');
+  rec.onclick = view;
 
-function mostrarImagenFullscreen(index) {
-  var imagen = imagenes[index];
-
-  if (imagen.requestFullscreen) {
-    imagen.requestFullscreen();
-  } else if (imagen.mozRequestFullScreen) {
-    imagen.mozRequestFullScreen();
-  } else if (imagen.webkitRequestFullscreen) {
-    imagen.webkitRequestFullscreen();
-  } else if (imagen.msRequestFullscreen) {
-    imagen.msRequestFullscreen();
+  function view() {
+    gal.style.display = "grid";
+    const scrollPosition = gal.scrollHeight * 0.8;
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth"
+    });
   }
-}
+  
+  function insertarImagenes(ruta, imag) {
+    const gallerySection = document.querySelector('.gallery');
 
-function cambiarImagen(direccion) {
-  if (direccion === 'anterior') {
-    currentIndex = (currentIndex - 1 + imagenes.length) % imagenes.length;
-  } else if (direccion === 'siguiente') {
-    currentIndex = (currentIndex + 1) % imagenes.length;
+    imag.forEach((imagen) => {
+      const imgElement = document.createElement('img');
+      imgElement.src = `${ruta}/${imagen}`;
+      gallerySection.appendChild(imgElement);
+
+      imgElement.addEventListener('click', function() {
+        var index = Array.from(imagenes).indexOf(this);
+        currentIndex = index;
+        mostrarImagenFullscreen(index);
+      });
+    });
   }
 
-  mostrarImagenFullscreen(currentIndex);
-}
+  var imagenes = document.querySelectorAll('.gallery img');
+  var currentIndex = 0;
 
-document.addEventListener('keydown', function(event) {
-  if (document.fullscreenElement && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
-    event.preventDefault();
+  function mostrarImagenFullscreen(index) {
+    var imagen = imagenes[index];
 
-    if (event.key === 'ArrowLeft') {
-      cambiarImagen('anterior');
-    } else if (event.key === 'ArrowRight') {
-      cambiarImagen('siguiente');
+    if (imagen.requestFullscreen) {
+      imagen.requestFullscreen();
+    } else if (imagen.mozRequestFullScreen) {
+      imagen.mozRequestFullScreen();
+    } else if (imagen.webkitRequestFullscreen) {
+      imagen.webkitRequestFullscreen();
+    } else if (imagen.msRequestFullscreen) {
+      imagen.msRequestFullscreen();
     }
   }
-});
 
-var arrowLeft = document.querySelector('.arrow-left');
-var arrowRight = document.querySelector('.arrow-right');
+  function cambiarImagen(direccion) {
+    if (direccion === 'anterior') {
+      currentIndex = (currentIndex - 1 + imagenes.length) % imagenes.length;
+    } else if (direccion === 'siguiente') {
+      currentIndex = (currentIndex + 1) % imagenes.length;
+    }
 
-arrowLeft.addEventListener('click', function() {
-  cambiarImagen('anterior');
-});
-
-arrowRight.addEventListener('click', function() {
-  cambiarImagen('siguiente');
-});
-
-for (var i = 0; i < imagenes.length; i++) {
-  imagenes[i].addEventListener('click', function() {
-    var index = Array.from(imagenes).indexOf(this);
-    currentIndex = index;
-    mostrarImagenFullscreen(index);
-  });
-}
-
-document.addEventListener('fullscreenchange', function() {
-  if (document.fullscreenElement) {
-    arrowLeft.style.display = 'block';
-    arrowRight.style.display = 'block';
-  } else {
-    arrowLeft.style.display = 'none';
-    arrowRight.style.display = 'none';
+    mostrarImagenFullscreen(currentIndex);
   }
-});
 
-function insertarImagenes(ruta, imag) {
-  const gallerySection = document.querySelector('.gallery');
+  document.addEventListener('keydown', function(event) {
+    if (document.fullscreenElement && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+      event.preventDefault();
 
-  imag.forEach((imagen) => {
-    const imgElement = document.createElement('img');
-    imgElement.src = `${ruta}/${imagen}`;
-    gallerySection.appendChild(imgElement);
+      if (event.key === 'ArrowLeft') {
+        cambiarImagen('anterior');
+      } else if (event.key === 'ArrowRight') {
+        cambiarImagen('siguiente');
+      }
+    }
   });
-}
 
-// Ejemplo de uso:
-var ruta = "../imagenes/Fotos";
+  var arrowLeft = document.querySelector('.arrow-left');
+  var arrowRight = document.querySelector('.arrow-right');
 
-const imag = [
-  "evento.webp",
-  "img1.webp",
-  "img2.webp",
-  "img3.webp",
-  "img4.webp",
-  "img5.webp",
-  "img6.webp",
-  "img7.webp",
-  "img8.webp",
-  "img9.webp",
-  "img10.webp",
-  "img11.webp",
-  "img12.webp"
-];
+  arrowLeft.addEventListener('click', function() {
+    cambiarImagen('anterior');
+  });
 
-insertarImagenes(ruta, imag);
+  arrowRight.addEventListener('click', function() {
+    cambiarImagen('siguiente');
+  });
+
+  // Ejemplo de uso:
+  var ruta = "../imagenes/Fotos";
+
+  const imag = [
+    "evento.webp",
+    "img1.webp",
+    "img2.webp",
+    "img3.webp",
+    "img4.webp",
+    "img5.webp",
+    "img6.webp",
+    "img7.webp",
+    "img8.webp",
+    "img9.webp",
+    "img10.webp",
+    "img11.webp",
+    "img12.webp"
+  ];
+
+  insertarImagenes(ruta, imag);
+});
