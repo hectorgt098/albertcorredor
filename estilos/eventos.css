@@ -5,3 +5,20 @@
 .date-top{
     font-family: 'Galano', sans-serif !important;
 }
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    min-height:60vh;
+    background-image: linear-gradient(#00000a50, #00000a70), url('../imagenes/Fotos/img11.webp');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.banner h1{
+    font-size: 30px;
+    text-transform: uppercase;
+}

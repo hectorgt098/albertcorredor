@@ -1,0 +1,16 @@
+.bannerciu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    background-image: linear-gradient(#00000a50, #00000a70) ,url('../imagenes/Fotos/img10.webp');
+    background-size: cover;
+    background-position: end;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.bannerciu h1{
+    text-shadow: 0 0 6px hsla(266, 75%, 69%, 0.603);
+}
