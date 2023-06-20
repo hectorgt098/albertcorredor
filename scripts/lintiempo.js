@@ -9,6 +9,7 @@ let eight = document.getElementById('eight');
 let lineadash = document.getElementById('lineadash')
 let lineadash2 = document.getElementById('lineadash2')
 let lineadash3 = document.getElementById('lineadash3')
+let guia = document.getElementById('guia')
 first.onclick = primero;
 second.onclick = segundo;
 thir.onclick = tercero;
@@ -27,6 +28,12 @@ function primero(){
     grad.style.animation = "swap .8s ease forwards"
     lineadash.style.transition = "all .5s ease"
     lineadash.style.clipPath = " inset(98% 75% 0 0)"
+    guia.style.right = "-68px"
+    guia.style.left = "inherit"
+    guia.style.bottom = "170px"
+    guia.style.rotate = "-30deg"
+    let par = guia.lastElementChild
+    par.style.display = "none"
 }
 
 function segundo(){
@@ -43,6 +50,10 @@ function segundo(){
     grmed.style.animation = "swap .7s ease forwards"
     gradned.style.animation = "vanishIn .7s ease forwards"
     lineadash.style.clipPath = "inset(50% 0 0 1%)"
+    guia.style.bottom = "226px"
+    guia.style.right = "38%"
+    guia.style.left = "inherit"
+    guia.style.rotate = "0deg"
 }
 
 function tercero(){
@@ -57,6 +68,9 @@ function tercero(){
     mtim.style.animation = "spaceInLeft 1s ease forwards";
     mt.style.animation = "spaceInLeft 1s ease forwards";
     lineadash.style.clipPath = " polygon(50% 0%, 100% 0, 100% 43%, 100% 75%, 100% 100%, 1% 100%, 1% 78%, 1% 43%, 50% 2%)"
+    guia.style.right = "51%"
+    guia.style.bottom = "244px"
+    guia.style.rotate = "-30deg"
 }
 
 function cuarto(){
@@ -92,6 +106,10 @@ function cuarto(){
     linea6.style.animation = "vanishIn 1s ease forwards";
     linea7.style.animation = "vanishIn 1s ease forwards";
     lineadash.style.clipPath = "  polygon(32% 0, 100% 0, 100% 43%, 100% 75%, 100% 100%, 1% 100%, 1% 78%, 1% 43%, 32% 3%)"
+    guia.style.right = "inherit"
+    guia.style.left = "-51px"
+    guia.style.bottom = "381px"
+    guia.style.rotate = "30deg"
 }
 
 function quinto(){
@@ -101,6 +119,9 @@ function quinto(){
     leng.style.opacity = 1;
     leng.style.animation = "entradaform 1s ease";
     lineadash2.style.clipPath = "inset(50% 40% 0 0"
+    guia.style.left = "40%"
+    guia.style.bottom = "547px"
+    guia.style.rotate = "30deg"
 }
 
 function sexto(){
@@ -114,6 +135,10 @@ function sexto(){
     cofart.style.animation = "swap 1s ease forwards";
     dom.style.animation = "entradaform 1s ease forwards";
     lineadash2.style.clipPath = " inset(0 45% 0 0)";
+    guia.style.left = "inherit"
+    guia.style.right = "-64px"
+    guia.style.bottom = "710px"
+    guia.style.rotate = "-30deg"
 }
 
 function septimo(){
@@ -124,6 +149,10 @@ function septimo(){
     linea.style.animation = "vanishIn .7s ease forwards";
     vrn.style.animation = "swap .7s ease ";
     lineadash3.style.clipPath = " inset(50% 0 0 30%)";
+    guia.style.left = "inherit"
+    guia.style.right = "44%"
+    guia.style.bottom = "847px"
+    guia.style.rotate = "-30deg"
 }
 
 function octavo(){

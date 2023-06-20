@@ -235,7 +235,7 @@ body{
 .ltiempo::before{
     content: '';
     width: 100vw;
-    height: 150%;
+    height:170%;
     background: var(--main-bg-color);
     top: -50vh;
     left: -11vw;
@@ -309,7 +309,7 @@ align-items: flex-end;
     right: 0;
     z-index: 0;
     border-radius: 0 100px 100px 0;
-    clip-path: inset(98% 95% 0 0);
+    clip-path: inset(98% 98% 0 0);
     transition: all .5s ease;
     gap:0;
 }
@@ -340,6 +340,12 @@ align-items: flex-end;
     border-radius: 0 200px 200px 0;
     transform: translateY(10px);
     clip-path: inset(100% 68% 0 32%);
+}
+
+@media  (max-width:1115px) {
+    #lineadash3{
+        height: 600px;
+    }
 }
 .redondear{
     width: 90%;
@@ -1154,4 +1160,22 @@ i{
 i:hover{
     background: var(--main-bg-color-1);
     box-shadow: 0 0 8px #fff;
+}
+
+#guia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    color: #fff;
+    font-weight: 600;
+    left: 260px;
+    bottom: -30px;
+    transition: all 1s ease;
+}
+
+#guia p{
+    margin: 0;
 }
