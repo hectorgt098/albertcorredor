@@ -10,12 +10,14 @@ document.addEventListener("DOMContentLoaded", function() {
       if (positionFromTop <= window.innerHeight * 0.8) {
         section.style.opacity = 1;
         if (section.classList.contains("sAlbert")) {
-          section.style.animation = "swap 2s ease forwards";
-        } else if (section.classList.contains("volun")) {
+          section.style.animation = "vanishIn 1.3s ease forwards";
+        }else if (section.classList.contains("volun")) {
           section.style.animation = "vanishIn 1s ease forwards";
-        } else if (section.classList.contains("galeria")) {
+        }else if (section.classList.contains("events")) {
+          section.style.animation = "puffIn 1s ease forwards";
+        }else if (section.classList.contains("galeria")) {
           section.style.animation = "spaceInLeft 1s ease forwards";
-        } else if (section.classList.contains('decal')) {
+        }else if (section.classList.contains('decal')) {
           section.style.animation = "spaceInLeft 1s ease forwards";
 
           var puntos = document.querySelectorAll('.puntos');

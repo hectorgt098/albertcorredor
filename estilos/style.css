@@ -6,6 +6,12 @@
   font-family: "GalanBold";
   src: url("../GALANO/Galano\ Grotesque\ Bold.otf");
 }
+
+@font-face {
+  font-family: "GalanLight";
+  src: url(../GALANO/Galano\ Grotesque\ Alt\ Light.otf);
+}
+
 section{
   transition: all 2s ease;
   opacity: 0;
@@ -18,11 +24,11 @@ a {
 }
 
 input:focus {
-  outline: 2px solid var(--main-bg-color-1);
+  outline: none;
 }
 
 textarea:focus {
-  outline: 2px solid var(--main-bg-color-1);
+  outline:none;
 }
 body {
   margin: 0;
@@ -210,7 +216,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-end;
   position: relative;
   z-index: 2;
-
+  overflow: hidden;
 }
 
 .sAlbert img {
@@ -906,11 +912,20 @@ select {
 #contact {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 35%;
   gap: 10px;
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 40px;
+
+}
+
+.copy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-bg-color-1);
+  font-family: 'GalanLight', sans-serif;
+  font-weight: 800;
 }
 
 #contact label {
@@ -921,11 +936,30 @@ select {
 .foot {
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background: var(--main-bg-color);
   padding: 100px 0;
+  gap: 20px;
+}
+
+.mensajeInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+  padding-left: 50px;
+  color: #fff;
+  font-family: "GalanLight", sans-serif;
+
+}
+.mensajeInfo h2, h3, img{
+  margin: 0;
+}
+
+.mensajeInfo img{
+  width: 40px;
 }
 
 #contact div {
@@ -939,11 +973,14 @@ select {
 textarea {
   width: 100%;
   height: 20px;
-  border: 1.5px solid var(--main-bg-color);
-  border-radius: 10px;
-  padding: 10px;
+  border-top: none;
+  border-right: none;
+  border-left:none;
+  border-bottom: 1.5px solid #00000a4b;
   color: #542583;
   font-size: 17px;
+  height: 30px;
+  font-family: 'Galano', sans-serif;
 }
 
 #contact textarea {
@@ -952,7 +989,6 @@ textarea {
 
 #btn-enviar {
   display: flex;
-  width: 300px !important;
   align-self: center;
   justify-content: center;
   height: 60px !important;
@@ -960,6 +996,7 @@ textarea {
   color: #fff !important;
   font-size: 20px !important;
   font-family: "GalanBold", sans-serif;
+  margin-top: 20px;
 }
 
 #animtext {
@@ -1163,5 +1200,20 @@ textarea {
     transform-origin: 0% 100%;
     -webkit-transform: scale(1) translate(0%, 0%);
     transform: scale(1) translate(0%, 0%);
+  }
+}
+
+@keyframes puffIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
   }
 }
