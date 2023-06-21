@@ -183,5 +183,4 @@ window.scrollTo({
     top: document.documentElement.scrollHeight - window.innerHeight,
     behavior: "smooth"
   });
-  
 }

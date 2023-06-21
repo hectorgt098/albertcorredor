@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "GalanLight";
-  src: url(../GALANO/Galano\ Grotesque\ Alt\ Light.otf);
+  src: url("../GALANO/Galano\ Grotesque\ Alt\ Light.otf");
 }
 
 section{
@@ -199,8 +199,12 @@ body::-webkit-scrollbar-thumb {
   content: "";
   width: 20%;
   height: 100%;
-  border-bottom: 5px solid #fff;
+  height: 5px;
+  background: linear-gradient(90deg,var(--main-bg-color-1) 80%,#b39802);
+  transform: skewX(-25deg);
   position: absolute;
+  bottom: -10px;
+
 }
 
 .sAlbert {
@@ -923,7 +927,7 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--main-bg-color-1);
+  background: #f6f6f6;
   font-family: 'GalanLight', sans-serif;
   font-weight: 800;
 }
