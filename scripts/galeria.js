@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   rec.onclick = view;
 
   function view() {
-    gal.style.display = "grid";
+    gal.style.display = "grd";
     const scrollPosition = gal.scrollHeight * 0.8;
     window.scrollTo({
       top: scrollPosition,

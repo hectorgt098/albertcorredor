@@ -1,3 +1,27 @@
+let menevent = document.getElementById("menevent")
+let menu = document.querySelector(".menu")
+menevent.onclick = menuOpen;
+menu.style.display = "none"
+
+function menuOpen() {
+  if (menu.style.display === "none") {
+    menu.style.animation = "";
+    menu.style.display = "flex";
+    menu.style.animation = "entrada 1s ease forwards";
+    menevent.src = "../imagenes/iconos/menucierre.svg";
+    menevent.style.animation = "rotate 1s ease";
+  } else {
+    menu.style.animation = "";
+    menu.style.animation = "salidamenu 1s ease forwards";
+    menevent.style.animation = "rotate 1s ease";
+    menevent.src = "../imagenes/iconos/menu.svg";
+    setTimeout(() => {
+      menu.style.display = "none";
+    }, 1000);
+  }
+}
+
+
 let carrusel = document.getElementById("carrusel");
 let imagenes = [
   "../imagenes/Fotos/img1.webp",
@@ -22,21 +46,7 @@ for (let i = 0; i < 20; i++) {
   carrusel.appendChild(spanElement);
 }
 
-
-
-/* script para abrir formulario */
 let vol = document.querySelector(".btnvol")
-window.addEventListener("scroll", function () {
-    var nav = document.querySelector(".menu");
-    var navOffset = nav.offsetTop + nav.offsetHeight;
-    var scrollPosition = window.scrollY + window.innerHeight;
-
-    if (scrollPosition >= navOffset) {
-      nav.classList.add("fixed");
-    } else {
-      nav.classList.remove("fixed");
-    }
-  });
 
 /* cambio de imagenes para donde esta albert corredor */
 

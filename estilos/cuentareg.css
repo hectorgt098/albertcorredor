@@ -9,17 +9,28 @@
     z-index: 9999;
     animation: entrada .8s ease-in;
     flex-direction: column;
+    backdrop-filter: blur(4px);
 }
 
 @keyframes entrada {
     0%{
-        clip-path: circle(1.9% at 50% 50%);
+      clip-path: circle(0.0% at 0 50%);
     }
 
     100%{
-        clip-path: circle(72.8% at 51% 54%);
+      clip-path: circle(141.0% at 0 0);
     }
 }
+
+@keyframes salidamenu{
+  0%{
+    clip-path: circle(141.0% at 0 0);
+  }
+  100%{
+    clip-path: circle(0.0% at 0 50%);
+  }
+}
+
 .contador {
     display: flex;
     flex-direction: column;
