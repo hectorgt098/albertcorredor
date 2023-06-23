@@ -1,4 +1,5 @@
 window.addEventListener('load', function() {
+  window.scrollBy(0, 0);
   let preloader = document.getElementById('preloader');
   preloader.style.display = 'none';
   let manto = document.querySelector('.manto');

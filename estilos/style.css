@@ -83,7 +83,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menu{
-position: absolute;
+position: fixed;
 display: none;
 flex-direction: row;
 width: 100%;
