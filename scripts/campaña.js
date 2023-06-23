@@ -18,6 +18,3 @@ for (var i = 0; i < articulos.length; i++) {
   });
 }
 
-
-
-

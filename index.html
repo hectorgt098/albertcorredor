@@ -19,6 +19,7 @@
     <title>Albert Corredor</title>
   </head>
   <body>
+    <div id="fullpage">
     <div id="preloader">
       <div class="loader">
         <img  src="imagenes/preload.webp" alt="" />
@@ -57,6 +58,7 @@
         <img src="imagenes/youtube.webp" alt="" />
       </div>
     </nav>
+    
     <section class="hero">
       <div class="txthero">
         <h1 id="animtext"></h1>
@@ -70,10 +72,7 @@
           “MEDELLÍN NOS UNE”
         </p>
         <a href="historia2.html">
-          <button>
-            Conoce
-            <strong>más</strong>
-          </button>
+          <a href="historia2.html"><button id="more-btn"> <span style="z-index: 2;">Conoce</span><strong>Más</strong> </button></a>
         </a>
       </div>
       <div class="imghero">
@@ -105,7 +104,22 @@
           <p>Actuar sobre los territorios HOY – Las soluciones no dependen de la política tradicional; pensar + actuar. </p>
         </article>
       </div>
+      <a href="voluntarios.html"><button id="more-btn"> <span style="z-index: 2;"><strong>Más</strong>Información </span> </button></a>
     </section>
+    <section class="trayect">
+      <h2>Trayectoria</h2>
+      <div class="grid-his">
+          <article><p> Nacimiento </p></article>
+          <article><p>Graduación Bachiller</p></article>
+          <article><p>Graduación Administración de Negocios en Medellín</p></article>
+          <article><p>Graduación de Estudios en el Exterior</p></article>
+          <article><p> Matrimonio con Daniela Jaramillo </p></article>
+          <article><p>Presidente Suplente de la Institución de formación técnica "Centro de Sistemas de Antioquia” CENSA </p></article>
+          <article><p>Funda y es General Manager de la institución "Centro de Idiomas LINGO” </p></article>
+          <article><p>Co-Fundador y Board Member de “Censa International College”, Co-Fundador y Miembro de la Junta de la Institución de formación técnica ICD en República Dominicana</p> </article>
+          
+      </div>
+  </section>
     <section class="events">
       <div class="event">
         <article>
@@ -189,8 +203,9 @@
         <p>Copyright &copy;2023 Albert Corredor | Developed by Hector Chavez</p>
       </div>
     </section>
+  </div>
     <div class="manto">
-      <section class="contador">
+      <div class="contador">
         <strong id="cierre">X</strong>
         <h1 class="title">Faltan:</h1>
         <div class="countdown">
@@ -223,8 +238,9 @@
           </div>
         </div>
         <img src="https://i.ibb.co/k4ML9s7/Recurso-1-2.png" alt="" />
-      </section>
+      </div>
     </div>
+  </div>
     <script src="scripts/cuentareg.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/animaciones.js"></script>

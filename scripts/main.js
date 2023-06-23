@@ -1,7 +1,7 @@
-let menevent = document.getElementById("menevent")
-let menu = document.querySelector(".menu")
+let menevent = document.getElementById("menevent");
+let menu = document.querySelector(".menu");
 menevent.onclick = menuOpen;
-menu.style.display = "none"
+menu.style.display = "none";
 
 function menuOpen() {
   if (menu.style.display === "none") {
@@ -21,7 +21,6 @@ function menuOpen() {
   }
 }
 
-
 let carrusel = document.getElementById("carrusel");
 let imagenes = [
   "../imagenes/Fotos/img1.webp",
@@ -35,7 +34,7 @@ let imagenes = [
   "../imagenes/Fotos/img9.webp",
   "../imagenes/Fotos/img10.webp",
   "../imagenes/Fotos/img11.webp",
-  "../imagenes/Fotos/img12.webp"
+  "../imagenes/Fotos/img12.webp",
 ];
 
 for (let i = 0; i < 20; i++) {
@@ -46,22 +45,63 @@ for (let i = 0; i < 20; i++) {
   carrusel.appendChild(spanElement);
 }
 
-let vol = document.querySelector(".btnvol")
+let vol = document.querySelector(".btnvol");
 
 /* cambio de imagenes para donde esta albert corredor */
 
-let donde = document.getElementById("imgcorredor")
+let donde = document.getElementById("imgcorredor");
 let index = 0;
 setInterval(() => {
-    donde.style.animation = "none"; // Elimina la animación actual
-    donde.style.backgroundImage = `url(${imagenes[index]})`;
-    index = (index + 1) % imagenes.length;
-    donde.offsetHeight; // Forzar el reflow para reiniciar la animación
-    donde.style.animation = "entradaform .8s ease";
-  }, 2000);
+  donde.style.animation = "none"; // Elimina la animación actual
+  donde.style.backgroundImage = `url(${imagenes[index]})`;
+  index = (index + 1) % imagenes.length;
+  donde.offsetHeight; // Forzar el reflow para reiniciar la animación
+  donde.style.animation = "entradaform .8s ease";
+}, 2000);
 
-  function restartVideo() {
-    var video = document.getElementById("player");
-    video.currentTime = 0; // Reiniciar el video al inicio
-    video.play(); // Reproducir el video nuevamente
-  }
+function restartVideo() {
+  var video = document.getElementById("player");
+  video.currentTime = 0; // Reiniciar el video al inicio
+  video.play(); // Reproducir el video nuevamente
+}
+// Función de callback para el Intersection Observer
+function handleIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const section = entry.target;
+      console.log(section);
+      // Realizar acciones específicas para cada sección
+      if (section.classList.contains("trayect")) {
+        var gridc = section.querySelectorAll(".grid-his");
+        var cuadros = section.querySelectorAll(".grid-his article");
+        section.style.animation = "vanishIn .7s ease"
+        gridc.forEach(function (element, index) {
+          setTimeout(function () {
+            element.style.animation = "swap 1s ease forwards";
+          }, index * 500); // 0.5 segundos de retraso progresivo
+        });
+
+        cuadros.forEach(function (element, index) {
+          setTimeout(function () {
+            element.style.animation = "spaceInLeft 1s ease forwards";
+          }, index * 500 + 1000); // 0.5 segundos de retraso progresivo después de 2 segundos
+        });
+      }
+    }
+  });
+}
+
+// Crear una instancia del Intersection Observer
+const observer = new IntersectionObserver(handleIntersection, {
+  root: null, // Observar el viewport
+  rootMargin: "0px",
+  threshold: 0.5, // Sección visible al menos en un 50%
+});
+
+// Obtener todas las secciones
+const sections = document.querySelectorAll("section");
+
+// Observar cada sección
+sections.forEach((section) => {
+  observer.observe(section);
+});

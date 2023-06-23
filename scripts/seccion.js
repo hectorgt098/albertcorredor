@@ -1,3 +1,4 @@
+/* 
 var sections = document.querySelectorAll('section');
 var currentSectionIndex = 0;
 
@@ -24,3 +25,4 @@ function scrollToSection(index) {
     behavior: 'smooth'
   });
 }
+ */

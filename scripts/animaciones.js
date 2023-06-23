@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
   var sections = document.querySelectorAll("section");
   var parrafos = document.querySelectorAll('.puntos p');
-
   function animateSections() {
     for (var i = 0; i < sections.length; i++) {
       var section = sections[i];
       var positionFromTop = section.getBoundingClientRect().top;
 
-      if (positionFromTop <= window.innerHeight * 0.8) {
+      if (positionFromTop <= window.innerHeight) {
         section.style.opacity = 1;
         if(section.classList.contains("volun")) {
           section.style.animation = "entrada 1s ease forwards";
@@ -40,3 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", animateSections);
   animateSections();
 });
+
+
