@@ -16,6 +16,9 @@ section{
   transition: all 2s ease;
   opacity: 0;
   transition: all 1s ;
+  height: 100%;
+  scroll-snap-align: start;
+  
 }
 
 
@@ -41,6 +44,8 @@ body {
   width: calc(100% - 50px);
   float: right;
   position: relative;
+  scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {
@@ -606,93 +611,81 @@ select {
 
 .volun {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../imagenes/Capa_1-2-6.webp");
-    z-index: 2;
-}
-.tarjeta {
-  display: flex;
-  width: 50vw;
-  align-items: flex-end;
+  z-index: 2;
+  align-items: center;
+  justify-content: space-between;  
 }
 
-.tarjeta article {
-  background: linear-gradient(
-    90deg,
-    var(--main-bg-color-1),
-    rgb(255, 200, 0),
-    var(--main-bg-color-1)
-  );
-  padding: 20% 16.6%;
-  border-radius: 0 400px 0 0;
-  position: relative;
+.gridtxt{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: minmax(200px,auto);
+  width: 90%;
+  gap: 30px;
+  margin-bottom: 10%;
+}
+
+
+.gridtxt article{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-}
-
-.tarjeta article h2 {
-  font-family: "GalanBold", sans-serif;
-  font-size: 3rem;
-  color: var(--main-bg-color);
-  margin: 3px;
-}
-
-.tarjeta article p {
-  font-size: 22px;
-}
-
-
-
-.tarjeta button {
-  width: 200px;
-  padding: 5px;
-  font-size: 22px;
-  color: var(--main-bg-color);
-  background: transparent;
-  border: 2px solid var(--main-bg-color);
-  border-radius: 5px;
-  font-family: "GalanBold", sans-serif;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+}
+
+.gridtxt article figure img{
+  width: 80px;
+}
+
+.gridtxt article figure{
+  margin: 0;
   position: relative;
-  z-index: 2;
-  transition-delay: .3s;
-  overflow: hidden;
-  cursor: pointer;
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: initial;
+  height: initial;
+  background: initial;
 }
 
-.tarjeta button::after{
+.gridtxt article figure::before{
   content: '';
-  width: 50%;
-  height: 100%;
-  background: var(--main-bg-color);
+  width: 80%;
+  height: 80%;
+  background: var(--main-bg-color-1);
   position: absolute;
-  z-index: 0;
-  left: 0;
-  transform: translateX(-100%) skewX(-25deg); 
-  transition: all .6s ease;
+  z-index: -1;
+  border-radius: 100px;
+  left: -10px;
+  top: -10px;
 }
 
-.tarjeta button:hover::after{
-  transform: translateX(200%) skewX(-25deg);
+.gridtxt article p{
+  text-align: center;
 }
 
-.tarjeta button:hover {
-  background: var(--main-bg-color);
-  color: var(--main-bg-color-1);
+.volun figure{
+  background-color: var(--main-bg-color-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 90%;
+  margin: 30px;
+}
+
+.volun figure img{
+  width: 400px;
 }
 
 .events {
   display: flex;
-  min-height: 70vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -803,7 +796,7 @@ select {
 /* seccion de la galeria */
 
 .galeria {
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   width: 100%;
   align-items: center;

@@ -9,10 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
       if (positionFromTop <= window.innerHeight * 0.8) {
         section.style.opacity = 1;
-        if (section.classList.contains("sAlbert")) {
-          section.style.animation = "vanishIn 1.3s ease forwards";
-        }else if (section.classList.contains("volun")) {
-          section.style.animation = "vanishIn 1s ease forwards";
+        if(section.classList.contains("volun")) {
+          section.style.animation = "entrada 1s ease forwards";
         }else if (section.classList.contains("events")) {
           section.style.animation = "puffIn 1s ease forwards";
         }else if (section.classList.contains("galeria")) {
