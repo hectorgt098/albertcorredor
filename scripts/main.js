@@ -59,11 +59,6 @@ setInterval(() => {
   donde.style.animation = "entradaform .8s ease";
 }, 2000);
 
-function restartVideo() {
-  var video = document.getElementById("player");
-  video.currentTime = 0; // Reiniciar el video al inicio
-  video.play(); // Reproducir el video nuevamente
-}
 // Función de callback para el Intersection Observer
 function handleIntersection(entries) {
   entries.forEach((entry) => {
@@ -74,19 +69,31 @@ function handleIntersection(entries) {
       if (section.classList.contains("trayect")) {
         var gridc = section.querySelectorAll(".grid-his");
         var cuadros = section.querySelectorAll(".grid-his article");
-        section.style.animation = "vanishIn .7s ease"
-        gridc.forEach(function (element, index) {
-          setTimeout(function () {
-            element.style.animation = "swap 1s ease forwards";
-          }, index * 500); // 0.5 segundos de retraso progresivo
+
+        gridc.forEach(function (element) {
+          element.style.animation = ""; // Restablecer la animación
         });
 
-        cuadros.forEach(function (element, index) {
-          setTimeout(function () {
-            element.style.animation = "spaceInLeft 1s ease forwards";
-          }, index * 500 + 1000); // 0.5 segundos de retraso progresivo después de 2 segundos
+        const observer = new IntersectionObserver(handleArticleIntersection, {
+          root: section,
+          rootMargin: "0px",
+          threshold: 1.0, // Artículo completamente visible dentro de la sección
+        });
+
+        cuadros.forEach((article) => {
+          observer.observe(article);
         });
       }
+    }
+  });
+}
+
+// Función de callback para el Intersection Observer de los artículos
+function handleArticleIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const article = entry.target;
+      article.style.animation = "spaceInLeft 1s ease forwards";
     }
   });
 }
@@ -95,7 +102,7 @@ function handleIntersection(entries) {
 const observer = new IntersectionObserver(handleIntersection, {
   root: null, // Observar el viewport
   rootMargin: "0px",
-  threshold: 0.5, // Sección visible al menos en un 50%
+  threshold: 0.1, // Sección visible al menos en un 50%
 });
 
 // Obtener todas las secciones
