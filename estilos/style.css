@@ -1424,7 +1424,10 @@ textarea {
 }
 
 .grid-his img{
-  width: 50px;
+  width: 40px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 
 
@@ -1468,14 +1471,18 @@ textarea {
   overflow: hidden;
 }
 
+#bach::before{
+  content: '13-12-2012';
+}
+
 #artmat::before{
   background: linear-gradient(90deg ,var(--main-bg-color-1), #edaa00) ;
   color: var(--main-bg-color);
 }
 
 .grid-his article::before{
-  content: '1989';
-  width: 30%;
+  content: '12-12-1989';
+  width: 140px;
   margin-top: -5px;
   height: 30px;
   justify-content: center;
@@ -1496,9 +1503,9 @@ textarea {
 
 
 .grid-his article:last-child::before{
-  background-color: var(--main-bg-color-1) !important;
-  color: #00000a90;
-}
+  background: linear-gradient(90deg ,var(--main-bg-color-1), #edaa00) ;
+  color: var(--main-bg-color);
+} 
 
 
 .dedo{
