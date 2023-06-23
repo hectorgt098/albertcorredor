@@ -1387,6 +1387,7 @@ textarea {
   margin: 0 auto;
   height: initial;
   overflow-x: hidden;
+  position: relative;
 }
 
 .trayect h2{
@@ -1394,6 +1395,11 @@ textarea {
   display: flex;
   flex-direction: column;
   color: var(--main-bg-color);
+  margin: 0;
+}
+
+.trayect p{
+  margin: 0; 
 }
 
 .trayect h2::after{
@@ -1415,6 +1421,10 @@ textarea {
 
 .carousel-wrapper{
   width: 6000px;
+}
+
+.grid-his img{
+  width: 50px;
 }
 
 
@@ -1445,18 +1455,41 @@ textarea {
   flex-direction: column;
   opacity: 0;
   scroll-snap-align: start;
-  min-height: 330px;
+  min-height: 200px;
+  overflow: hidden;
+} 
+
+
+#artmat{
+  background-color: var(--main-bg-color);
+  color: #f6f6f6;
+  font-weight: 600;
+  border-left:3px solid var(--main-bg-color-1);
+  overflow: hidden;
+}
+
+#artmat::before{
+  background: linear-gradient(90deg ,var(--main-bg-color-1), #edaa00) ;
+  color: var(--main-bg-color);
 }
 
 .grid-his article::before{
   content: '1989';
-  width: 60%;
+  width: 30%;
+  margin-top: -5px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 0 4px 4px 0;
+  transform: skewX(-15deg)  translateX(-10px);
+  font-family: 'GalanBold',sans-serif;
+  font-size: 18px;
   background: var(--main-bg-color);
   align-self: flex-start ;
   margin-left: -10px;
   color: #f6f6f6;
   font-weight: 600;
-  border-radius: 0 0 100px 0;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -1465,4 +1498,36 @@ textarea {
 .grid-his article:last-child::before{
   background-color: var(--main-bg-color-1) !important;
   color: #00000a90;
+}
+
+
+.dedo{
+  width: 50px;
+  position: absolute;
+  right: 20px;
+  animation: dedo 2s ease infinite;
+}
+
+@keyframes dedo {
+  0%{
+    transform: translateX(0);
+  }
+  20%{
+    rotate: 10deg;
+    transform: translateX(-50px);
+  }
+  40%{
+    rotate: -10deg;
+    transform: translateX(0);
+  }
+  60%{
+    rotate: 10deg;
+    transform: translateX(-50px);
+  }
+  100%{
+    transform: translateX(0);
+    rotate: 0deg;
+  }
+  
+
 }

@@ -1,5 +1,6 @@
 let menevent = document.getElementById("menevent");
 let menu = document.querySelector(".menu");
+let cont = 0
 menevent.onclick = menuOpen;
 menu.style.display = "none";
 
@@ -64,12 +65,18 @@ function handleIntersection(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const section = entry.target;
-      console.log(section);
       // Realizar acciones específicas para cada sección
       if (section.classList.contains("trayect")) {
         var gridc = section.querySelectorAll(".grid-his");
         var cuadros = section.querySelectorAll(".grid-his article");
-
+        if(cont == 0){
+          const dedo = document.createElement('img')
+          dedo.src = "../imagenes/iconos/bxs-hand-up.svg"
+          dedo.width = "60px"
+          dedo.className = "dedo"
+          section.appendChild(dedo);
+        }
+        cont++
         gridc.forEach(function (element) {
           element.style.animation = ""; // Restablecer la animación
         });
