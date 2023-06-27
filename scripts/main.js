@@ -5,20 +5,40 @@ menevent.onclick = menuOpen;
 menu.style.display = "none";
 
 function menuOpen() {
+  let ancho = screen.width;
+
   if (menu.style.display === "none") {
-    menu.style.animation = "";
-    menu.style.display = "flex";
-    menu.style.animation = "entrada 1s ease forwards";
-    menevent.src = "../imagenes/iconos/menucierre.svg";
-    menevent.style.animation = "rotate 1s ease";
+    if(ancho <= 720){
+      menu.style.animation = "";
+      menu.style.display = "flex";
+      menu.style.animation = "entradacel 1s ease forwards";
+      menevent.src = "../imagenes/iconos/menucierre.svg";
+      menevent.style.animation = "rotate 1s ease";
+    }else{
+      menu.style.animation = "";
+      menu.style.display = "flex";
+      menu.style.animation = "entrada 1s ease forwards";
+      menevent.src = "../imagenes/iconos/menucierre.svg";
+      menevent.style.animation = "rotate 1s ease";
+    }
   } else {
+    if(ancho <= 720){
     menu.style.animation = "";
-    menu.style.animation = "salidamenu 1s ease forwards";
+    menu.style.animation = "salidacel 1s ease forwards";
     menevent.style.animation = "rotate 1s ease";
     menevent.src = "../imagenes/iconos/menu.svg";
     setTimeout(() => {
       menu.style.display = "none";
     }, 1000);
+    }else{
+      menu.style.animation = "";
+      menu.style.animation = "salidamenu 1s ease forwards";
+      menevent.style.animation = "rotate 1s ease";
+      menevent.src = "../imagenes/iconos/menu.svg";
+      setTimeout(() => {
+        menu.style.display = "none";
+      }, 1000);
+    }
   }
 }
 

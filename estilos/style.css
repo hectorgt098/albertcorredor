@@ -930,10 +930,12 @@ select {
     width: 100%;
   }
 
-  .enlaces {
-    display: none;
+  .enlaces{
+    width: 60vw;
   }
 
+  .menu-img{display: none;
+  }
   .hero{
     flex-direction: column-reverse;
     align-items: center;
@@ -947,6 +949,11 @@ select {
     flex-direction: column;
     align-items: center;
   }
+
+  #animtext{
+    width: 90vw !important;
+  }
+
   #animtext::before{
     text-align: center;
     width: 100% !important;
@@ -956,7 +963,7 @@ select {
   }
 
   .imghero img{
-    width: 40%;
+    width: 60%;
   }
 
   #player {
@@ -982,23 +989,30 @@ select {
 
   .volun {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     min-height: 90vh;
     background-position: 0 40vh;
   }
 
-  .tarjeta {
-    width: 100vw;
+  .grid-his article{
+    width: 240px;
   }
-  .tarjeta article {
-    border-radius: 0 0 100px 100px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10%;
+  .volun figure img{
+    width: 100%;
   }
 
+  .volun figure{
+    width: initial;
+    background: none;
+  }
+
+  .gridtxt{
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+
+
+ 
   .tarjeta article h2 {
     font-size: clamp(25px, 8vh, 40px);
     text-align: center;
@@ -1025,15 +1039,14 @@ select {
     width: 100%;
     border-radius: 0 0 400px 0;
   }
+  .container-redes{
+    grid-template-columns: repeat(1,1fr) !important;
+  }
 
   .corrart {
     width: 100%;
-    height: 250px;
-    border-radius: 0 0 400px 0;
-  }
-
-  #imgcorredor {
-    border-radius: 0 0 400px 0;
+    height: 200px;
+    transform: translateX(-15%) skewX(10deg);
   }
   .event {
     width: 90vw;
@@ -1050,6 +1063,23 @@ select {
   .txtGaleria {
     width: 90vw;
     margin-bottom: 100px;
+  }
+  
+  .foot{
+    flex-direction: column !important;
+    padding-top: 40px;
+    padding-bottom: 40px !important;
+  }
+  .mensajeInfo{
+    padding-left: 0 !important;
+    width: 90% !important;
+  }
+  .mensajeInfo h2{
+    max-width: 100% !important;
+  }
+  #contact{
+    width: 90% !important;
+    padding: 20px !important;
   }
 }
 
@@ -1552,4 +1582,22 @@ textarea {
   }
   
 
+}
+
+@keyframes entradacel{
+  0%{
+    clip-path: circle(0.0% at 0 0);
+  }
+  100%{
+    clip-path: circle(141.0% at 0 0);
+  }
+}
+
+@keyframes salidacel {
+  0%{
+    clip-path: circle(141.0% at 0 0);
+  }
+  100%{
+    clip-path: circle(0.0% at 0 0);
+  }
 }
