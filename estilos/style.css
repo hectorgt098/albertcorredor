@@ -12,6 +12,11 @@
   src: url("../GALANO/Galano\ Grotesque\ Alt\ Light.otf");
 }
 
+@font-face {
+  font-family: 'GalanItalic';
+  src: url('../GALANO/Galano\ Grotesque\ Italic.otf');
+}
+
 *{
   box-sizing: border-box;
 }
@@ -55,6 +60,8 @@ html,body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   overflow-x: hidden;
+  width: calc(100vw - 48px);
+  float: right;
 }
 
 :root {
@@ -761,62 +768,28 @@ select {
 }
 
 .event article h2 {
-  font-size: 3rem;
+  font-size: clamp(22px, 8vh, 40px);
   color: var(--main-bg-color);
   margin: 0;
   line-height: 1;
+  font-family: 'GalanItalic', sans-serif;
+  font-weight: 300;
 }
 .event article p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #00000abf;
 }
 
-.event article button {
-  width: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 17px;
-  padding: 10px;
-  border: none;
-  background: var(--main-bg-color);
-  color: #fff;
-  font-weight: 600;
-  margin-top: 20px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.event article button::before{
-  content: '';
-  width: 40%;
-  height: 110%;
-  position: absolute;
-  background: var(--main-bg-color-1);
-  z-index: 0;
-  left: 0;
-  transform: skewX(-25deg) translateX(-100%);
-  transition: all .6s ease;
-}
-
-.event article button:hover::before{
-  transform: skewX(-25deg) translateX(250%) ;
-}
 
 .eventimg {
   display: flex;
   width: 50vw;
-}
-
-.event article span {
-  display: flex;
-  gap: 6px;
   align-items: center;
 }
 
-.event article span img {
-  width: 18px;
+.event button{
+  margin-top: 20px;
 }
 
 .eventimg {
@@ -828,26 +801,26 @@ select {
 .corrart {
   width: 49.3vw;
   height: 500px;
-  border-bottom: 20px solid var(--main-bg-color);
-  border-left: 2px solid var(--main-bg-color);
-  border-radius: 0 0 0 4400px;
+  border-radius: 30px;
   background-position: center;
   background-size: cover;
   position: relative;
   background: var(--main-bg-color);
+  transform: skewX(10deg) translateX(15%);
+  border: 1px solid #b74aff;
+  box-shadow: -2px 0 6px 1px #00000a80, inset 0 0 6px 1px var(--main-bg-color-1);
+  overflow: hidden;
 }
 
 #imgcorredor {
   position: absolute;
   width: 99.7%;
   height: 100%;
-  border-bottom: 20px solid var(--main-bg-color);
-  border-left: 2px solid var(--main-bg-color);
-  border-radius: 0 0 0 4400px;
   background-image: linear-gradient(#00000a60, #00000a80),
     url(../imagenes/Fotos/evento.webp);
   background-position: center;
   background-size: cover;
+  transform: skewX(350deg) scale(1.2);
 }
 
 /* seccion de la galeria */
@@ -916,45 +889,15 @@ select {
 
 .txtGaleria h2 {
   color: var(--main-bg-color);
-  font-size: 3rem;
+  font-size: clamp(22px, 8vh, 40px);
   margin: 0;
+  font-family: 'GalanLight';
 }
 .txtGaleria p {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: #00000abf;
 }
 
-.txtGaleria button {
-  width: 200px;
-  padding: 10px;
-  border: none;
-  background: var(--main-bg-color);
-  color: #fff;
-  font-size: 17px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 4px;
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.txtGaleria button::before{
-  content: '';
-  position: absolute;
-  width: 40%;
-  height: 100%;
-  transform: skewX(-25deg) translateX(-100%);
-  background: var(--main-bg-color-1);
-  left: 0;
-  transition: all .6s ease;
-}
-
-.txtGaleria button:hover::before{
-  transform: skewX(-25deg) translateX(250%);
-}
 
 /* responsive */
 
@@ -1072,16 +1015,18 @@ select {
   gap: 10px;
   background: #fff;
   padding: 40px;
-
+  box-shadow: 4px 8px 8px 2px #00000a40;
 }
 
 .copy{
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f6f6f6;
+  background: var(--main-bg-color);
+  color: #f6f6f6;
   font-family: 'GalanLight', sans-serif;
-  font-weight: 800;
+  font-weight: 400;
+  height: 60px;
 }
 
 #contact label {
@@ -1095,27 +1040,50 @@ select {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: var(--main-bg-color);
-  padding: 100px 0;
+  background-color: #f6f6f6;
+  min-height: calc(100vh - 60px);
   gap: 20px;
 }
 
 .mensajeInfo{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1  0px;
   width: 40%;
   padding-left: 50px;
   color: #fff;
   font-family: "GalanLight", sans-serif;
 
 }
-.mensajeInfo h2, h3, img{
+.mensajeInfo h3, img{
   margin: 0;
+  color: var(--main-bg-color);
+  font-size: 2rem;
+  font-family: 'GalanItalic';
+  font-weight: 300;
+}
+
+.mensajeInfo h2{
+  color: #00000abf;
+  font-size: clamp(14px, 5vw, 18px);
+  font-family: 'GalanLight';
+  font-weight: 600;
+  max-width: 70%;
+  min-width: 50%;
+  margin: 5px 0 10px 0;
 }
 
 .mensajeInfo img{
-  width: 40px;
+  width: 30px;
+}
+
+.mensajeInfo span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #00000abf;
+  font-weight: 600;
 }
 
 #contact div {
