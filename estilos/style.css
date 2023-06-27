@@ -902,14 +902,55 @@ select {
 /* responsive */
 
 @media (max-width: 760px) {
+
+  .menulat{
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--main-bg-color);
+  }
+
+  .nav-redes{
+    flex-direction: row;
+    position: relative;
+    bottom: 0;
+    align-items: center;
+  }
+
+  #fullpage{
+    scroll-snap-type: none;
+    width: 100%;
+  }
+
   .enlaces {
     display: none;
   }
 
+  .hero{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
   .txthero {
-    width: 100vw;
+    width: 90%;
     text-align: center;
     flex-direction: column;
+    align-items: center;
+  }
+  #animtext::before{
+    text-align: center;
+    width: 100% !important;
+  }
+  #animtext::after{
+    left: 40%;
+  }
+
+  .imghero img{
+    width: 40%;
   }
 
   #player {
