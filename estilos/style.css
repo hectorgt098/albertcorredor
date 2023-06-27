@@ -903,6 +903,10 @@ select {
 
 @media (max-width: 760px) {
 
+  section{
+    height: initial;
+    padding: 20px 0;
+  }
   .menulat{
     width: 100%;
     height: 60px;
