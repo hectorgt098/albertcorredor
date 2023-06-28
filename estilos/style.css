@@ -217,7 +217,7 @@ align-items: center;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background-color: #f6f6f6;
+  background: linear-gradient(45deg,#DCC2FD, #F9F8F8);
   justify-content: center;
   gap: 30px;
 }
@@ -1068,6 +1068,7 @@ select {
     flex-direction: column !important;
     padding-top: 40px;
     padding-bottom: 40px !important;
+    
   }
   .mensajeInfo{
     padding-left: 0 !important;
@@ -1116,7 +1117,7 @@ select {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  background-color: #f6f6f6;
+  background: linear-gradient(45deg,#d7bef8, #dbe3ff);
   min-height: calc(100vh - 60px);
   gap: 20px;
 }

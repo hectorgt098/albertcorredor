@@ -88,7 +88,6 @@ function handleIntersection(entries) {
       // Realizar acciones específicas para cada sección
       if(section.classList.contains("volun")){
         var gridtxt = document.querySelector('.gridtxt')
-        console.log(section.childNodes) 
         let contenido = section.childNodes
         contenido[3].style.animation = "spaceInDown .8s ease"
         contenido[5].style.animation = "slideDownReturn .8s ease"
@@ -116,12 +115,23 @@ function handleIntersection(entries) {
         cuadros.forEach((article) => {
           observer.observe(article);
         });
-      }else if(section.classList.contains("events")){
-        let contenid = section.childNodes
-        let event = contenid[1].childNodes
-        console.log(contenid,event)
-        contenid[3].style.animation = "entrada 1s linear forwards"  
-        event[1].style.animation = "shadow-drop-bottom-left .7s linear forwards" 
+      }else if (section.classList.contains("events")) {
+        let contenid = section.childNodes;
+        let event = contenid[1].childNodes;
+        let ev = contenid[3].childNodes;
+        let prr = Array.from(ev[1].children); // Obtener los elementos hijos de ev[1]
+      
+        prr.forEach((element) => {
+          element.style.animation = "tracking-in-contract .8s ease";
+        });
+        event[1].style.animation = "shadow-drop-bottom-left .7s linear forwards";
+      }else if(section.classList.contains("galeria")){
+        let contenedor = section.childNodes
+        let contxt = contenedor[3].childNodes
+        let arr = Array.from(contxt[1].children)
+        arr.forEach((element)=>{
+          element.style.animation = "tracking-in-expand-forward-top .8s ease"
+        })
       }
     }
   });

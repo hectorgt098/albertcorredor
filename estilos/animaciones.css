@@ -1437,12 +1437,40 @@
   }
 }
 
-
 @keyframes shadow-drop-bottom-left {
   0% {
     box-shadow: 0 0 0 0 transparent;
   }
   100% {
     box-shadow: -12px 12px 20px -12px rgb(0, 0, 0);
+  }
+}
+
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 0.6em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-forward-top {
+  0% {
+    letter-spacing: -0.2em;
+    transform: translateZ(-700px) translateY(-100px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
   }
 }
