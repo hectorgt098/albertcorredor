@@ -1,6 +1,14 @@
+body{
+  height: initial !important;
+  width: calc(100vw - 65px);
+  margin: 0;
+  float: right;
+}
+
 .adn {
     display: flex;
     flex-direction: column;
+    height: initial;
   }
   
   .adnbann {
@@ -41,6 +49,9 @@
     width: 100%;
     align-items: flex-start;
     position: relative;
+  }
+  .decal{
+    height: initial;
   }
   
   #cuadro {
