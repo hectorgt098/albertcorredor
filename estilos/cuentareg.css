@@ -97,7 +97,7 @@
     overflow: hidden;
   }
   .contador img{
-    width: 300px;
+    width: 260px;
     margin-top: 35px;
   }
   @keyframes slideIn {
