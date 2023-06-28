@@ -78,7 +78,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
   flex-direction: column;
   background-color: #f6f6f6;
 }
@@ -98,6 +98,7 @@ body {
   z-index: 999;
   margin: 0;
   align-items: center;
+  top: 0;
 }
 
 .menu-img {

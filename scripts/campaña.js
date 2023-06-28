@@ -1,20 +1,8 @@
-var articulos = document.querySelectorAll('article');
-var p1 = document.querySelectorAll('p');
+let t1 = document.querySelector('.tabla1').children
+let elem = Array.from(t1)
 
-for (var i = 0; i < articulos.length; i++) {
-  var imagen = articulos[i].querySelector('img');
-  articulos[i].addEventListener('mouseenter', function(event) {
-    var parrafo = event.currentTarget.querySelector('p');
-    var imagen = event.currentTarget.querySelector('img');
-    parrafo.style.display = "block";
-    parrafo.style.animation = "vanishIn .4s ease forwards";
-    imagen.style.display = "none";
-  });
-  articulos[i].addEventListener('mouseleave', function(event) {
-    var parrafo = event.currentTarget.querySelector('p');
-    var imagen = event.currentTarget.querySelector('img');
-    parrafo.style.display = "none";
-    imagen.style.display = "block";
-  });
-}
-
+elem.forEach(function(element, index) {
+  setTimeout(function() {
+    element.style.animation = "spaceInRight 1s ease forwards";
+  }, (index * 500) + 1000); // 0.5 segundos de retraso progresivo después de 2 segundos
+});
