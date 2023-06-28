@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 
 const galery = document.querySelector(".galery");
 const feed = document.querySelector(".contenedor-galery");
@@ -28,3 +28,4 @@ function CrearHtml(data) {
   }
 }
 
+ */

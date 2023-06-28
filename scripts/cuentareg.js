@@ -1,11 +1,14 @@
 window.addEventListener('load', function() {
   window.scrollBy(0, 0);
   let preloader = document.getElementById('preloader');
+  let hero = document.querySelector('.hero');
   preloader.style.display = 'none';
   let manto = document.querySelector('.manto');
   manto.style.display = "flex";
   // Agregar evento de clic
   manto.onclick = cerrar;
+  hero.style.animation = "spaceInDown .8s lineal";
+
 
   // Agregar evento de tecla
   document.addEventListener('keydown', function(event) {

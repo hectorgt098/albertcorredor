@@ -86,7 +86,13 @@ function handleIntersection(entries) {
     if (entry.isIntersecting) {
       const section = entry.target;
       // Realizar acciones específicas para cada sección
-      if (section.classList.contains("trayect")) {
+      if(section.classList.contains("volun")){
+        var gridtxt = document.querySelector('.gridtxt')
+        console.log(section.childNodes) 
+        let contenido = section.childNodes
+        contenido[3].style.animation = "spaceInDown .8s ease"
+        contenido[5].style.animation = "slideDownReturn .8s ease"
+      }else if(section.classList.contains("trayect")) {
         var gridc = section.querySelectorAll(".grid-his");
         var cuadros = section.querySelectorAll(".grid-his article");
         if (cont == 0) {
@@ -110,6 +116,12 @@ function handleIntersection(entries) {
         cuadros.forEach((article) => {
           observer.observe(article);
         });
+      }else if(section.classList.contains("events")){
+        let contenid = section.childNodes
+        let event = contenid[1].childNodes
+        console.log(contenid,event)
+        contenid[3].style.animation = "entrada 1s linear forwards"  
+        event[1].style.animation = "shadow-drop-bottom-left .7s linear forwards" 
       }
     }
   });
