@@ -115,14 +115,63 @@
                         <p>Actuar sobre los territorios HOY – Las soluciones no dependen de la política tradicional; pensar + actuar.</p>
                     </article>
                 </div>
-                <a href="voluntarios.html">
                     <button id="more-btn">
-                        <span style="z-index: 2;">
-                            <strong>Más</strong>
-                            Información
+                        <span id="formTeam" style="z-index: 2;">
+                            <strong>Abrir</strong>
+                            Formulario
                         </span>
                     </button>
-                </a>
+                    <div class="formTeam">
+                        <form
+          id="voluntform"
+          name="contacto"
+          method="POST"
+          data-netlify="true"
+          netlify
+        >
+          <h2>Unete al team corredor</h2>
+          <p>
+            Recibirás un correo electrónico o una llamada telefónica con
+            instrucciones detalladas después que te registres.
+          </p>
+          <input type="number" name="cedula" placeholder="cedula" />
+          <input type="text" name="nombre" placeholder="Nombre" />
+          <div
+            style="display: flex; flex-direction: row; width: 100%; gap: 10px"
+          >
+            <input
+              style="width: 50%"
+              type="number"
+              name="celular"
+              placeholder="Celular"
+            />
+            <input
+              style="width: 50%"
+              type="email"
+              name="correo"
+              placeholder="Correo"
+            />
+          </div>
+          <div
+            style="display: flex; gap: 10px; flex-direction: row; width: 100%"
+          >
+            <select style="width: 50%" name="comuna" id="comuna">
+              <option value="predefinido">seleccione su comuna</option>
+            </select>
+            <select style="width: 50%" name="barrio" id="barrio">
+              <option value="predefinida">Seleccione su barrio</option>
+            </select>
+          </div>
+          <p style="margin: 10px 0; line-height: 1; font-size: 14px">
+            Por ultimo, cuentanos ¿En que nos quieres ayudar?
+          </p>
+          <select name="tpvoluntario" id="tpvoluntario">
+            <option value="predefinid">Seleccione tipo voluntariado</option>
+            <option value="firma">firmas</option>
+          </select>
+          <input id="btnenvio" type="submit" value="Enviar" />
+        </form>
+                    </div>
             </section>
             <section class="trayect">
                 <h2>Trayectoria</h2>
@@ -396,6 +445,7 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/seccion.js"></script>
     <script src="scripts/carrusel.js"></script>
+    <script src="scripts/team.js"></script>
     <script src="scripts/api.js"></script>
     <script
     async
