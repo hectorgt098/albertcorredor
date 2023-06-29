@@ -730,6 +730,7 @@ select {
   width: initial;
   height: initial;
   background: initial;
+  overflow: initial;
 }
 
 .gridtxt article figure::before {
@@ -754,7 +755,6 @@ select {
 
 .volun figure {
   /* background: linear-gradient(-45deg,var(--main-bg-color-1) 70%,var(--main-bg-color-1),#f6f6f6 ); */
-  background: #f6f6f6;
   border-radius: 2px;
   display: flex;
   flex-direction: column;
@@ -762,10 +762,77 @@ select {
   align-items: center;
   height: 200px;
   width: 95%;
+  position: relative;
+  overflow: hidden  ;
+  border-radius: 5px;
+  
+}
+
+@keyframes figuraskew {
+  0%{
+    transform: skewX(-3deg);
+    clip-path: polygon(0 0, 26% 1%, 57% 1%, 81% 1%, 100% 0, 100% 13%, 100% 35%, 100% 53%, 100% 74%, 100% 100%, 76% 99%, 53% 99%, 26% 99%, 0 100%);
+  }
+  50%{
+    transform: skewX(0);
+    clip-path: polygon(0 2%, 26% 1%, 57% 0, 80% 0, 100% 0, 100% 16%, 100% 32%, 100% 52%, 100% 76%, 100% 100%, 79% 98%, 56% 98%, 26% 99%, 0 100%);
+  }
+  100%{
+    transform: skewX(-3deg);
+    clip-path: polygon(0 0, 26% 1%, 57% 1%, 81% 1%, 100% 0, 100% 13%, 100% 35%, 100% 53%, 100% 74%, 100% 100%, 76% 99%, 53% 99%, 26% 99%, 0 100%);
+  }
+}
+#bandera{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  animation: figuraskew 1s linear infinite;
+  background: var(--main-bg-color-1);
+  width: 100%;
+}
+#bandera img{
+  animation: 1s linear infinite;
+}
+
+@keyframes skewimg {
+  0%{
+    transform: skewX(-1deg);
+  }
+  50%{
+    transform: skewX(3deg);
+  }
+  100%{
+    transform: skew(-1deg);
+  }
+
+
+}
+
+#bandera::before{
+  content: '';
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(96deg,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e,transparent,#00000a0e );
+  background-size: 100% 100%;
+  animation: bandera 3s linear infinite;
+}
+
+@keyframes bandera {
+  0%{
+    transform: translateX(-50%) skewX(5deg);
+  }
+  100%{
+    transform: translateX(0) skewX(10deg);
+  }
 }
 
 .volun figure img {
-  width: 400px;
+  width: 80%;
 }
 
 .events {
