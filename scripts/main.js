@@ -138,6 +138,11 @@ function handleIntersection(entries) {
         contain[0].style.animation = "spaceInLeft .7s ease"
         contain[4].style.animation = "spaceInDown .7s ease"
         contain[6].style.animation = "spaceInRight .7s ease"
+      }else if(section.classList.contains("footeri")){
+        let contenedor = section.childNodes
+        let contain = contenedor[1].childNodes
+        contain[3].style.animation = "scaleup .5s ease-in"
+        console.log(contain)
       }
     }
   });
@@ -167,3 +172,6 @@ const sections = document.querySelectorAll("section");
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+
+

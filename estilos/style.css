@@ -123,17 +123,18 @@ body {
   flex-direction: column;
 }
 
-.enlaces a:first-child {
+
+.enlaces a {
   position: relative;
   display: flex;
 }
 
-.enlaces a:first-child::after {
+.enlaces a.active::after{
   content: "";
   position: absolute;
   width: 20%;
   height: 1px;
-  background: #ffff00ca;
+  background: var(--main-bg-color-1);
   bottom: 0;
   box-shadow: 0 0 10px 1px var(--main-bg-color);
 }
@@ -1109,6 +1110,17 @@ select {
   box-shadow: 4px 8px 8px 2px #00000a40;
 }
 
+@keyframes scaleup {
+  0%{
+    opacity: .2;
+    transform: scaleY(80%) translateY(30%);
+  }
+  100%{
+    opacity: 1;
+    transform: scaleY(100%) translateY(0);
+  }
+}
+
 .copy {
   display: flex;
   justify-content: center;
@@ -1359,7 +1371,7 @@ textarea {
 }
 
 .carousel-wrapper {
-  width: 6000px;
+  width: 3000px;
 }
 
 .grid-his img {
