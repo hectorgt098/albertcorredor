@@ -1,8 +1,8 @@
 let boton = document.getElementById('formTeam')
 let content = document.querySelector('.formTeam')
-let form = document.getElementById('voluntform')
+let cerrarForm = document.getElementById('cerrarfor')
 boton.onclick = abrirForm
-form.onclick = cerrar
+cerrarForm.onclick = cerrar
 
 function cerrar(){
     content.style.display="none"
@@ -15,13 +15,13 @@ function abrirForm(){
 const comunas = [
     "Ciudad",
     "Popular",
-    "Santa Cruz",
+    "Santa_Cruz",
     "Manrique",
     "Aranjuez",
     "Castilla",
     "Doce_de_Octubre",
     "Robledo",
-    "Villa Hermosa",
+    "Villa_Hermosa",
     "Buenos_aires",
     "La_Candelaria",
     "Laureles",
@@ -31,10 +31,10 @@ const comunas = [
     "Guayabal",
     "Belén",
     "Palmitas",
-    "San cristobal",
+    "San_cristobal",
     "Altavista",
-    "San Antonio de Prado",
-    "Santa Elena",
+    "San_Antonio_De_Prado",
+    "Santa_Elena",
   ];
   
   const barriosPorComuna = {
@@ -258,7 +258,172 @@ const comunas = [
     ],Manrique:[
         "Campo Valdes N° 2",
         "El Pomar",
-        ""
+        "El Raizal",
+        "La Salle",
+        "Las Granjas",
+        "La Cruz, Oriente",
+        "Manrique Central N° 2",
+        "Manrique Oriental",
+        "Manrique Oriente",
+        "Maria Cano - Carambolas",
+        "San José La Cima N° 1",
+        "San José La Cima N° 2",
+        "Santa Inés",
+        "Versalles N° 1",
+        "Versalles N° 2"
+    ],Palmitas:[
+        "Cabecera Palmitas",
+        "La Aldea",
+        "La Frisola",
+        "La Potrera Miserenga",
+        "La Sucia",
+        "La volcana-Guayabal",
+        "Sector Central",
+        "Suburbano La Aldea",
+        "Suburbano Palmitas",
+        "Suburbano Potrera Miserenga",
+        "Urquita"
+    ],Robledo : [
+        "Altamira",
+        "Aures N° 1",
+        "Aures N° 2",
+        "Barrio Facultad de Minas - Facultad de Minas Universidad Nacional",
+        "Bello Horizonte",
+        "Bosques San Pablo",
+        "Cerro El Volador",
+        "Córdoba",
+        "Cucaracho",
+        "El Diamante",
+        "Fuente Clara",
+        "La Pilaraca",
+        "Liceo Universidad de Antioquia",
+        "López de Mesa",
+        "Monteclaro",
+        "Nazareth",
+        "Nueva Villa de la Iguana",
+        "Olaya Herrera",
+        "Pajarito",
+        "Palenque",
+        "Robledo",
+        "San Germán",
+        "Santa Margarita",
+        "Universidad de Antioquia",
+        "Villa Flora"
+    ],San_Antonio_De_Prado: [
+        "Cabecera San Antonio De Prado",
+        "El astillero",
+        "El salado",
+        "La Florida",
+        "La verde",
+        "Montañita",
+        "Potrerito",
+        "San José",
+        "Suburbano Potrerito",
+        "Yarumalito",
+        "Zona Expansión San Antonio"
+    ],San_cristobal:[
+        "Boquerón",
+        "Cabecera San Cristobal",
+        "El Carmelo",
+        "El Llano",
+        "El Patio",
+        "El Picacho",
+        "El Uvito",
+        "El Yolombo",
+        "La Cuchilla",
+        "La Ilusión",
+        "La Loma",
+        "La Palma ",
+        "Las Playas",
+        "Naranjal",
+        "Pajarito",
+        "Pedregal Alto",
+        "San Cristobal",
+        "San Jóse de la Montaña",
+        "Suburbano del Llano",
+        "Suburbano la Cuchilla",
+        "Suburbano la Loma",
+        "Suburbano Palma Patio",
+        "Suburbano Pedregal Alto",
+        "Suburbano Travesias",
+        "Travesías",
+        "Zona Expansión Altos de Calazans",
+        "Zona Expansión Pajarito",
+        "Zona Expansión Eduardo Santos"
+    ],San_Javier:[
+        "Antonio Nariño",
+        "Belencito",
+        "Betania",
+        "Blanquizal",
+        "Eduardo Santos",
+        "El corazón",
+        "El pesebre",
+        "El salado",
+        "El socorro",
+        "Juan XIII - La Quiebra",
+        "La Gabriela",
+        "La pradera",
+        "Las independencias",
+        "Los Alcázares",
+        "Metropolitano",
+        "Nuevos Conquistadores",
+        "San Javier N° 1",
+        "San Javer N° 2",
+        "Santa Rosa de Lima",
+        "Veinte de Julio"
+    ],Santa_Cruz:[
+        "Andalucía",
+        "El Playón de los Comuneros",
+        "La Francia",
+        "La Frontera",
+        "La Isla",
+        "La Rosa",
+        "Moscú N° 1",
+        "Pablo VI",
+        "Santa Cruz",
+        "Villa del Socorro",
+        "Villa Niza"
+    ],Santa_Elena:[
+        "Barro Blanco",
+        "Barro Blanco",
+        "Cabecera Santa Elena",
+        "El Cerro",
+        "El llano",
+        "El Placer",
+        "El Plan",
+        "Las Palmas",
+        "Mazo",
+        "Media Luna",
+        "Piedra Gorda",
+        "Piedras Blancas-Matazano",
+        "Santa Elena Sector Central",
+        "Suburbano Barro Blanco",
+        "Suburbano El Llano",
+        "Suburbano el Tesoro",
+        "Suburbano Matasano 1",
+        "Suburbano Matasano 3",
+        "Suburbano Piedra Gorda",
+        "Suburbano Santa Elena Central"
+    ],Villa_Hermosa:[
+        "Batallón Girardot",
+        "El Pinal",
+        "Enciso",
+        "La ladera",
+        "La libertad",
+        "La Mansión",
+        "Las Estancias",
+        "La Sierra",
+        "Llanaditas",
+        "Los Mangos",
+        "San Antonio",
+        "San Miguel",
+        "Santa Lucía - Las Estancias",
+        "Sucre",
+        "Trece de Noviembre",
+        "Villa Hermosa",
+        "Villa Lilliam",
+        "Villa Tina",
+        "Villa Turbay"
     ]
     
   };
@@ -297,3 +462,27 @@ const comunas = [
   // Agregar evento change al elemento <select> de comunas
   selectComuna.addEventListener("change", actualizarBarrios);
   
+
+
+  let tpvoluntarios = document.getElementById("tpvoluntario")
+
+  const tipoVoluntario = [
+    "Quiero ayudar con firmas",
+    "Quiero pertenecer al equipo de volanteo",
+    "Quiero ayudar en eventos",
+    "Quiero un balconero",
+    "Quiero un microperforado para mi carro",
+    "Quiero ser testigo electoral",
+    "Quiero ser pregonero",
+    "Quiero donar",
+    "Tengo capacidad de convocatoria",
+    "Soy artista",
+    "Soy líder(esa) comunitario",
+    "Otro"
+  ]
+
+  tipoVoluntario.forEach((tipo)=>{
+    let option = document.createElement("option")
+    option.text = tipo
+    tpvoluntarios.appendChild(option)
+  })

@@ -537,10 +537,25 @@ body {
   gap: 10px;
   width: 40%;
   animation: entradaform 0.8s ease;
-  padding: 60px 30px 30px 30px;
+  padding: 20px 30px 30px 30px;
   background: #f6f6f6;
   border-radius: 5px;
   box-shadow: -3px 3px 20px #00000a40;
+}
+#voluntform i{
+  text-align: right;
+  font-family: 'GalanBold', sans-serif;
+  color: var(--main-bg-color);
+  padding: 5px;
+  display: flex;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  justify-self: flex-end;
+  align-self: flex-end;
+  transform: translateX(20px) translateY(-10px);
+  cursor: po;
 }
 
 #voluntform p {
