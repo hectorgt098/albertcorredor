@@ -132,6 +132,12 @@ function handleIntersection(entries) {
         arr.forEach((element)=>{
           element.style.animation = "tracking-in-expand-forward-top .8s ease"
         })
+      }else if(section.classList.contains("feeds")){
+        let contenedor = section.childNodes
+        let contain = contenedor[3].children
+        contain[0].style.animation = "spaceInLeft .7s ease"
+        contain[4].style.animation = "spaceInDown .7s ease"
+        contain[6].style.animation = "spaceInRight .7s ease"
       }
     }
   });

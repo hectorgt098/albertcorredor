@@ -1,0 +1,71 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mapint{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    padding: 10px;
+    position: relative;
+}
+
+.mapint::before{
+    content: '';
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    z-index: -1;
+    filter: blur(5px);
+    border-radius: 10px;
+    background: linear-gradient( 158deg,#fff 40%, #631587 80%);
+}
+
+.mapint img{
+    width: 100%;
+}
+
+.mapint span{
+    background: var(--main-bg-color-1);
+    color: #631587;
+    padding: 3px;
+    border-radius: 100px;
+    position: absolute;
+    width: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;font-family: 'GalanBold', sans-serif ;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.mapint span:hover{
+    scale: 110%;
+}
+
+#gum{
+    bottom: 10%;
+    left: 20.5%;
+    rotate: -33.5deg;
+}
+
+#msh{
+    bottom: 26%;
+    left: 34%;
+    rotate: -33.5deg;
+}
+
+#mst{
+    bottom: 42%;
+    left: 48%;
+    rotate: -33.5deg;
+}
+
+#mdc{
+    top: 32%;
+    right: 18%;
+    rotate: -33.5deg;
+}
