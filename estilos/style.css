@@ -833,7 +833,6 @@ select {
 }
 
 .formTeam{
-  display:flex;
   position: fixed;
   top: 0;
   width: 100%;
