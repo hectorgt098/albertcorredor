@@ -1476,18 +1476,6 @@ textarea {
   top: 15px;
 }
 
-.grid-his article:first-child {
-  background: rgb(255, 225, 0);
-  font-weight: 700;
-}
-
-.grid-his article:last-child {
-  background: #542583;
-  color: #f6f6f6;
-  font-weight: 600;
-  border-left: 3px solid rgb(255, 225, 0);
-}
-
 .grid-his article {
   display: grid;
   padding: 10px;
@@ -1507,21 +1495,44 @@ textarea {
   overflow: hidden;
 }
 
-#artmat {
-  background-color: var(--main-bg-color);
-  color: #f6f6f6;
-  font-weight: 600;
-  border-left: 3px solid var(--main-bg-color-1);
-  overflow: hidden;
+.artmat {
+  background-color: var(--main-bg-color) !important;
+  color: #f6f6f6 !important;
+  font-weight: 600 !important;
+  border-left: 3px solid var(--main-bg-color-1) !important;
+  overflow: hidden !important;
+}
+
+#nac{
+  background: var(--main-bg-color-1) ;
+  font-weight: 800;
 }
 
 #bach::before {
+  content: "30-11-2006";
+}
+
+#grad::before{
   content: "13-12-2012";
 }
 
-#artmat::before {
-  background: linear-gradient(90deg, var(--main-bg-color-1), #edaa00);
-  color: var(--main-bg-color);
+#gradex::before{
+  content: "06-05-2016";
+}
+
+.artmat::before {
+  background: linear-gradient(90deg, var(--main-bg-color-1), #edaa00) !important;
+  color: var(--main-bg-color) !important;
+}
+
+#mat::before{
+  content: "03-07-2013";
+}
+
+.grop{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .grid-his article::before {
@@ -1545,10 +1556,7 @@ textarea {
   text-align: center;
 }
 
-.grid-his article:last-child::before {
-  background: linear-gradient(90deg, var(--main-bg-color-1), #edaa00);
-  color: var(--main-bg-color);
-}
+
 
 .dedo {
   width: 50px;
