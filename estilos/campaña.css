@@ -263,8 +263,8 @@ body{
     position: relative;
   }
 
-  .imgfondo span{
-    border-right: 0;
+  .imgfondo{
+    border-right: 0 !important;
   }
 
   .tabla1 .imgfondo::after{
