@@ -263,6 +263,10 @@ body{
     position: relative;
   }
 
+  .imgfondo span{
+    border-right: 0;
+  }
+
   .tabla1 .imgfondo::after{
     content: '';
     width: 100%;
