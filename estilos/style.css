@@ -94,10 +94,10 @@ body {
   width: 100%;
   height: 100vh;
   background: linear-gradient(45deg, #dcc2fd, #f9f8f8);
-  justify-content: center;
+  justify-content: flex-start;
   z-index: 999;
   margin: 0;
-  align-items: center;
+  align-items: flex-end;
   top: 0;
 }
 
@@ -121,6 +121,8 @@ body {
   gap: 10px;
   width: 30vw;
   flex-direction: column;
+  margin-bottom: 100px;
+  margin-left: 80px;
 }
 
 
@@ -757,6 +759,19 @@ select {
   border-radius: 100px;
   left: -10px;
   top: -10px;
+  animation:flotante  1s ease infinite;
+}
+
+@keyframes flotante{
+  0%{
+    transform: translate(-2px, -2px);
+  }
+  50%{
+    transform: translate(2px, 2px);
+  }
+  100%{
+    transform: translate(-2px, -2px);
+  }
 }
 
 .gridtxt article p {
@@ -1246,14 +1261,13 @@ select {
 .mensajeInfo {
   display: flex;
   flex-direction: column;
-  gap: 1 0px;
+  gap: 10px;
   width: 40%;
   padding-left: 50px;
   color: #fff;
   font-family: "GalanLight", sans-serif;
 }
-.mensajeInfo h3,
-img {
+.mensajeInfo h3{
   margin: 0;
   color: var(--main-bg-color);
   font-size: 2rem;
@@ -1407,17 +1421,20 @@ textarea {
 }
 
 @keyframes entrada {
-  0% {
-    clip-path: inset(0 0 96% 0);
+0%{
+  clip-path: circle(0.2% at 0 50%);
+}
+100%{
+  clip-path: circle(141.4% at 0 50%);
+}
+}
+
+@keyframes salidamenu {
+  0%{
+    clip-path: circle(141.4% at 0 50%);
   }
-  30% {
-    clip-path: inset(0 0 64% 0);
-  }
-  80% {
-    clip-path: inset(0 0 38% 0);
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
+  100%{
+    clip-path: circle(0.2% at 0 50%);
   }
 }
 
@@ -1479,8 +1496,7 @@ textarea {
 .grid-his article {
   display: grid;
   padding: 10px;
-  background: #f6f6f6;
-  box-shadow: 0 3px 8px 1px #00000a40;
+  background: transparent;
   justify-content: normal;
   justify-items: stretch;
   align-items: start;
@@ -1493,6 +1509,12 @@ textarea {
   scroll-snap-align: start;
   min-height: 200px;
   overflow: hidden;
+  transition: all .6s ;
+}
+
+.grid-his article:hover{
+  scale: 103%;
+  box-shadow: 0 0 6px #00000a40;
 }
 
 .artmat {

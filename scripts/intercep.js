@@ -14,4 +14,7 @@ if(filename == "campa%C3%B1a.html"){
 }if(filename == "index.html"){
     let enlaces = document.querySelector(".enlaces").childNodes
     enlaces[1].classList.add("active");
+}if(filename == "galeria2.html"){
+    let enlaces = document.querySelector(".enlaces").childNodes
+    enlaces[9].classList.add("active");
 }
