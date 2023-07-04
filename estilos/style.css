@@ -1551,6 +1551,57 @@ textarea {
   content: "03-07-2013";
 }
 
+#psi::before{
+  content: '25-04-2012 / 28-12-2016';
+  width: max-content;
+  padding: 0 15px;
+}
+
+#lin::before{
+  content: '01-08-2013 / 31-01-2019';
+  width: max-content;
+  padding: 0 15px;
+}
+#cob::before{
+  content: '28-05-2009 / 31-12-2019';
+}
+
+#vne::before{
+  content: '01-08-2012 / 15-01-2017';
+}
+
+#com::before{
+  content: '27-10-2019';
+}
+
+#pcm::before{
+  content: '02-01-2020';
+}
+#scd::before{
+  content:'10-11-2021';
+}
+#ric::before{
+  content: '03-03-2022';
+}
+
+#cdd::before{
+  content: '07-04-2022';
+}
+
+#rpd::before{
+  content: '28-05-2022';
+}
+#frc::before{
+  content: '24-06-2022';
+}
+#rbm::before{
+  content: 'feb-2023';
+}
+#lrh::before{
+  content: 'abr-may-2023';
+  width: max-content;
+  padding: 0 15px;
+}
 .grop{
   display: flex;
   flex-direction: column;
@@ -1559,7 +1610,8 @@ textarea {
 
 .grid-his article::before {
   content: "12-12-1989";
-  width: 140px;
+  width: max-content;
+  padding: 0 15px;
   margin-top: -5px;
   height: 30px;
   justify-content: center;
@@ -1577,7 +1629,6 @@ textarea {
   margin-bottom: 10px;
   text-align: center;
 }
-
 
 
 .dedo {
